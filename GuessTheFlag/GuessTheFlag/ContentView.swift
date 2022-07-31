@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingScore = false
+    @State private var showingFinalScore = false
     @State private var scoreTitle = ""
     @State private var score = 0
+    @State private var round = 0
     
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State var correctAnswer = Int.random(in: 0...2)
+    
+    let roundsPerGame = 3
     
     var body: some View {
         ZStack {
@@ -70,6 +74,11 @@ struct ContentView: View {
         } message: {
             Text("Your score is \(score)")
         }
+        .alert("Game over", isPresented: $showingFinalScore) {
+            Button("New game", action: reset)
+        } message: {
+            Text("Your final score is \(score)")
+        }
     }
     
     func flagTapped(_ number: Int) {
@@ -81,10 +90,15 @@ struct ContentView: View {
             decreaseScore()
         }
 
+        round += 1
         showingScore = true
     }
     
     func askQuestion() {
+        guard round < roundsPerGame else {
+            showingFinalScore = true
+            return
+        }
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
     }
@@ -95,6 +109,14 @@ struct ContentView: View {
     
     func decreaseScore() {
         score -= 2
+    }
+    
+    func reset() {
+        round = 0
+        score = 0
+        showingScore = false
+        showingFinalScore = false
+        askQuestion()
     }
 }
 
