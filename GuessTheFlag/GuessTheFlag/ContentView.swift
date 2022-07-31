@@ -46,10 +46,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original )
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
+                            FlagImage(name: countries[number])
                         }
                     }
                 }
@@ -117,6 +114,18 @@ struct ContentView: View {
         showingScore = false
         showingFinalScore = false
         askQuestion()
+    }
+}
+
+private extension ContentView {
+    struct FlagImage: View {
+        let name: String
+        var body: some View {
+            Image(name)
+                .renderingMode(.original )
+                .clipShape(Capsule())
+                .shadow(radius: 5)
+        }
     }
 }
 
