@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var value = 0.0
     @State private var fromSelection: UnitVolume = .liters
     @State private var toSelection: UnitVolume = .gallons
+    @FocusState private var valueIsFocused: Bool
     
     let units: [UnitVolume] = [.milliliters, .liters, .cups, .pints, .gallons]
     var converted: Measurement<UnitVolume> {
@@ -22,6 +23,8 @@ struct ContentView: View {
             Form {
                 Section {
                     TextField("Enter the value", value: $value, format: .number)
+                        .keyboardType(.decimalPad)
+                        .focused($valueIsFocused)
                 } header: {
                     Text("Value")
                 }
@@ -48,6 +51,14 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("UnitConverter")
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        valueIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
