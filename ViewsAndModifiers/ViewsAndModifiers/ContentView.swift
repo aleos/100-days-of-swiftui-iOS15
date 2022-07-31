@@ -53,6 +53,22 @@ extension View {
     }
 }
 
+/// Makes a view have a large, blue font suitable for prominent titles in a view.
+struct ProminentTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+    }
+}
+
+extension View {
+    /// Makes a view have a large, blue font suitable for prominent titles in a view.
+    func prominentTitle() -> some View {
+        self.modifier(ProminentTitle())
+    }
+}
+
 struct Watermark: ViewModifier {
     var text: String
 
@@ -101,6 +117,8 @@ struct GridStack<Content: View>: View {
 struct ContentView: View {
     var body: some View {
         VStack {
+            Text("Prominent Title")
+                .prominentTitle()
             Text("Hello World")
                 .padding()
                 .background(Color.red)
