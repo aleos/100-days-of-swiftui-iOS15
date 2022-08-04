@@ -21,6 +21,15 @@ struct ContentView: View {
             Text("Static Row")
         }
     }
+    
+    func loadFile() {
+        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt") {
+            // we found the file in our bundle!
+            if let fileContents = try? String(contentsOf: fileURL) {
+                // we loaded the file into a string!
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
