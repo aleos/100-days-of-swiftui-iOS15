@@ -8,46 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    let people = ["Finn", "Leia", "Luke", "Rey"]
+    @State private var usedWords: [String] = []
+    @State private var rootWord = ""
+    @State private var newWord = ""
 
     var body: some View {
         List {
-            Text("Static Row")
-
-            ForEach(people, id: \.self) {
-                Text($0)
+            Section {
+                TextField("Enter your word", text: $newWord)
+                    .textInputAutocapitalization(.none)
             }
-
-            Text("Static Row")
-        }
-    }
-    
-    func loadFile() {
-        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt") {
-            // we found the file in our bundle!
-            if let fileContents = try? String(contentsOf: fileURL) {
-                // we loaded the file into a string!
+            
+            Section {
+                ForEach(usedWords, id: \.self) { word in
+                    HStack {
+                        Image(systemName: "\(word.count).circle")
+                        Text(word)
+                    }
+                }
             }
         }
+        .navigationTitle(rootWord)
+        .onSubmit(addNewWord)
     }
     
-    func test() {
-        let input = """
-                    a
-                    b
-                    c
-                    """
-        let letters = input.components(separatedBy: "\n")
-        let letter = letters.randomElement()
+    func addNewWord() {
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !answer.isEmpty else { return }
         
-        let trimmed = letter?.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        let word = "swift"
-        let checker = UITextChecker()
-        
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        let allGood = misspelledRange.location == NSNotFound
+        withAnimation { 
+            usedWords.insert(answer, at: 0)
+        }
+        newWord = ""
     }
 }
 
