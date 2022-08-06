@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var animationAmount = 1.0
     
     var body: some View {
-        CustomAnimationContentView()
+        AnimatedBindingsContentView()
     }
 }
 
@@ -39,6 +39,32 @@ struct CustomAnimationContentView: View {
         )
         .onAppear {
             self.animationAmount = 2
+        }
+    }
+}
+
+struct AnimatedBindingsContentView: View {
+    @State private var animationAmount: CGFloat = 1
+
+    var body: some View {
+        print(animationAmount)
+
+        return VStack {
+            Stepper("Scale amount", value: $animationAmount.animation(
+                Animation.easeInOut(duration: 1)
+                    .repeatCount(3, autoreverses: true)
+            ), in: 1...10)
+
+            Spacer()
+
+            Button("Tap Me") {
+                self.animationAmount += 1
+            }
+            .padding(40)
+            .background(Color.red)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .scaleEffect(animationAmount)
         }
     }
 }
