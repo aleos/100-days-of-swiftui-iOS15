@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var enabled = false
     
     var body: some View {
-        ExplicitAnimationContentView()
+        ControllingTheAnimationStackContentView()
     }
 }
 
@@ -84,6 +85,24 @@ struct ExplicitAnimationContentView: View {
         .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
     }
 }
+
+struct ControllingTheAnimationStackContentView: View {
+    @State private var enabled = false
+
+    var body: some View {
+        Button("Tap Me") {
+            enabled.toggle()
+        }
+        .frame(width: 200, height: 200)
+        .background(enabled ? .blue : .red)
+        .animation(nil, value: enabled)
+        .foregroundColor(.white)
+        .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
+        .animation(.interpolatingSpring(stiffness: 10, damping: 1), value: enabled)
+    }
+}
+
+// MARK: - Previews
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
