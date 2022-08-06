@@ -15,10 +15,13 @@ struct ContentView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    
+    @State private var score = 0
 
     var body: some View {
         NavigationView {
             List {
+                Text("Score: \(score)")
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.none)
@@ -73,7 +76,7 @@ struct ContentView: View {
             return
         }
         
-        guard answer == rootWord else {
+        guard answer != rootWord else {
             wordError(title: "Word is the root word", message: "Be more creative! Create words other than the root word")
             return
         }
@@ -85,11 +88,14 @@ struct ContentView: View {
         
         withAnimation { 
             usedWords.insert(answer, at: 0)
+            increaseScore(correctAnswer: answer)
         }
         newWord = ""
     }
     
     func startGame() {
+        score = 0
+        
         // 1. Find the URL for start.txt in our app bundle
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             // 2. Load start.txt into a string
@@ -107,6 +113,14 @@ struct ContentView: View {
 
         // If were are *here* then there was a problem – trigger a crash and report the error
         fatalError("Could not load start.txt from bundle.")
+    }
+    
+    func increaseScore(correctAnswer word: String = "") {
+        score += max(1, word.count - 2)
+    }
+    
+    func decreaseScore() {
+        score -= 1
     }
     
     func isOriginal(word: String) -> Bool {
@@ -143,6 +157,7 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError = true
+        decreaseScore()
     }
 }
 
