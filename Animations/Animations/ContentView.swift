@@ -11,16 +11,34 @@ struct ContentView: View {
     @State private var animationAmount = 1.0
     
     var body: some View {
+        CustomAnimationContentView()
+    }
+}
+
+struct CustomAnimationContentView: View {
+    @State private var animationAmount: CGFloat = 1
+
+    var body: some View {
         Button("Tap Me") {
-            animationAmount += 1
+            // self.animationAmount += 1
         }
-        .padding(50)
-        .background(.red)
+        .padding(40)
+        .background(Color.red)
         .foregroundColor(.white)
         .clipShape(Circle())
-        .scaleEffect(animationAmount)
-        .blur(radius: (animationAmount - 1) * 3)
-        .animation(.default, value: animationAmount)
+        .overlay(
+            Circle()
+                .stroke(Color.red)
+                .scaleEffect(animationAmount)
+                .opacity(Double(2 - animationAmount))
+                .animation(
+                    Animation.easeOut(duration: 1)
+                        .repeatForever(autoreverses: false)
+                )
+        )
+        .onAppear {
+            self.animationAmount = 2
+        }
     }
 }
 
