@@ -41,6 +41,16 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        startGame()
+                    } label: {
+                        Text("Restart")
+                    }
+
+                }
+            }
         }
     }
     
