@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var enabled = false
     
     var body: some View {
-        ControllingTheAnimationStackContentView()
+        AnimatingGesturesContentView()
     }
 }
 
@@ -99,6 +98,26 @@ struct ControllingTheAnimationStackContentView: View {
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
         .animation(.interpolatingSpring(stiffness: 10, damping: 1), value: enabled)
+    }
+}
+
+struct AnimatingGesturesContentView: View {
+    @State private var dragAmount = CGSize.zero
+    
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            .frame(width: 300, height: 200)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .offset(dragAmount)
+            .gesture(
+                DragGesture()
+                    .onChanged { dragAmount = $0.translation }
+                    .onEnded { _ in
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) {
+                            dragAmount = .zero
+                        }
+                    }
+            )
     }
 }
 
