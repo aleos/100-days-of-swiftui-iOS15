@@ -7,13 +7,13 @@
 	Challenge: **`UnitConverter`**
 
 2. `GuessTheFlag`
-3. `ViewsAndModifiers`
+3. 🧪 `ViewsAndModifiers`
 
 	Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
 		
 4. `BetterRest`
 5. `WordScramble`
-6. `‌`
+6. 🧪 `‌Animations`
 7. `‌`
 8. `‌`
 9. `‌`
