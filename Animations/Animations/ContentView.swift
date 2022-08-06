@@ -33,7 +33,8 @@ struct CustomAnimationContentView: View {
                 .opacity(Double(2 - animationAmount))
                 .animation(
                     Animation.easeOut(duration: 1)
-                        .repeatForever(autoreverses: false)
+                    .repeatForever(autoreverses: false),
+                    value: animationAmount
                 )
         )
         .onAppear {
