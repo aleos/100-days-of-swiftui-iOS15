@@ -4,12 +4,12 @@
 
 1. `WeSplit`
 
-		Challenge: `UnitConverter`
+	Challenge: **`UnitConverter`**
 
 2. `GuessTheFlag`
 3. `ViewsAndModifiers`
 
-		Milestone: Projects 1-3. Challenge: `RockPaperScissors`
+	Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
 		
 4. `BetterRest`
 5. `WordScramble`
