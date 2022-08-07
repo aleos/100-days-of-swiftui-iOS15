@@ -10,16 +10,29 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        TransitionsContentView()
+        NavigationView {
+            List {
+                NavigationLink("Implicit Animation") { ImplicitAnimationView() }
+                NavigationLink("Custom Animation") { CustomAnimationContentView() }
+                NavigationLink("Animated Bindings") { AnimatedBindingsContentView() }
+                NavigationLink("Explicit Animation") { ExplicitAnimationContentView() }
+                NavigationLink("Controlling the Animation Stack") { ControllingTheAnimationStackContentView() }
+                NavigationLink("Animating Gestures") { AnimatingGesturesContentView() }
+                NavigationLink("Snake Letters") { SnakeLettersContentView() }
+                NavigationLink("Transitions") { TransitionsContentView() }
+                NavigationLink("Transition Modifier") { TransitionModifierView() }
+            }
+            .navigationTitle("💫 Animations")
+        }
     }
 }
 
-struct ImplicitAnimatoinView: View {
+struct ImplicitAnimationView: View {
     @State private var animationAmount: CGFloat = 1
 
     var body: some View {
         Button("Tap Me") {
-            self.animationAmount += 1
+            animationAmount += 1
         }
         .padding(50)
         .background(Color.red)
@@ -28,6 +41,7 @@ struct ImplicitAnimatoinView: View {
         .scaleEffect(animationAmount)
         .blur(radius: (animationAmount - 1) * 3)
         .animation(.default, value: animationAmount)
+        .navigationTitle("Implicit Animation")
     }
 }
 
@@ -36,7 +50,7 @@ struct CustomAnimationContentView: View {
 
     var body: some View {
         Button("Tap Me") {
-            // self.animationAmount += 1
+            // animationAmount += 1
         }
         .padding(40)
         .background(Color.red)
@@ -54,8 +68,9 @@ struct CustomAnimationContentView: View {
                 )
         )
         .onAppear {
-            self.animationAmount = 2
+            animationAmount = 2
         }
+        .navigationTitle("Custom Animation")
     }
 }
 
@@ -74,7 +89,7 @@ struct AnimatedBindingsContentView: View {
             Spacer()
 
             Button("Tap Me") {
-                self.animationAmount += 1
+                animationAmount += 1
             }
             .padding(40)
             .background(Color.red)
@@ -82,6 +97,7 @@ struct AnimatedBindingsContentView: View {
             .clipShape(Circle())
             .scaleEffect(animationAmount)
         }
+        .navigationTitle("Animated Bindings")
     }
 }
 
@@ -91,7 +107,7 @@ struct ExplicitAnimationContentView: View {
     var body: some View {
         Button("Tap Me") {
             withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
-                self.animationAmount += 360
+                animationAmount += 360
             }
         }
         .padding(50)
@@ -99,6 +115,7 @@ struct ExplicitAnimationContentView: View {
         .foregroundColor(.white)
         .clipShape(Circle())
         .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+        .navigationTitle("Explicit Animation")
     }
 }
 
@@ -115,6 +132,7 @@ struct ControllingTheAnimationStackContentView: View {
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 0))
         .animation(.interpolatingSpring(stiffness: 10, damping: 1), value: enabled)
+        .navigationTitle("Controlling the Animation Stack")
     }
 }
 
@@ -122,19 +140,24 @@ struct AnimatingGesturesContentView: View {
     @State private var dragAmount = CGSize.zero
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
-            .frame(width: 300, height: 200)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .offset(dragAmount)
-            .gesture(
-                DragGesture()
-                    .onChanged { dragAmount = $0.translation }
-                    .onEnded { _ in
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) {
-                            dragAmount = .zero
-                        }
+        LinearGradient(
+            gradient: Gradient(colors: [.yellow, .red]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        .frame(width: 300, height: 200)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .offset(dragAmount)
+        .gesture(
+            DragGesture()
+                .onChanged { dragAmount = $0.translation }
+                .onEnded { _ in
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) {
+                        dragAmount = .zero
                     }
-            )
+                }
+        )
+        .navigationTitle("Animating Gestures")
     }
 }
 
@@ -163,6 +186,7 @@ struct SnakeLettersContentView: View {
                     enabled.toggle()
                 }
         )
+        .navigationTitle("Snake Letters")
     }
 }
 
@@ -184,6 +208,7 @@ struct TransitionsContentView: View {
                     .transition(.asymmetric(insertion: .scale, removal: .opacity))
             }
         }
+        .navigationTitle("Transitions")
     }
 }
 
@@ -207,6 +232,7 @@ struct TransitionModifierView: View {
                 isShowingRed.toggle()
             }
         }
+        .navigationTitle("Transition Modifier")
      }
 }
 
