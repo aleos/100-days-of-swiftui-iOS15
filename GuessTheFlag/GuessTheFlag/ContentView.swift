@@ -46,17 +46,17 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
-                            withAnimation {
-                                flagTapped(number)
-                            }
+                            flagTapped(number)
                         } label: {
                             FlagImage(name: countries[number])
                                 .rotation3DEffect(
                                     number == answer ? Angle(degrees: 360) : Angle(degrees: 0),
                                     axis: (x: 0, y: 1, z: 0)
                                 )
+                                .animation(answer != nil && number == answer ? .easeInOut : nil)
                                 .opacity(answer == nil || number == answer ? 1 : 0.25)
                                 .scaleEffect(answer == nil || number == answer ? 1 : 0.8)
+                                .animation(.easeInOut)
                         }
                     }
                 }
