@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var score = 0
     @State private var round = 0
     
+    @State private var answer: Int?
+    
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State var correctAnswer = Int.random(in: 0...2)
     
@@ -44,9 +46,17 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number)
+                            withAnimation {
+                                flagTapped(number)
+                            }
                         } label: {
                             FlagImage(name: countries[number])
+                                .rotation3DEffect(
+                                    number == answer ? Angle(degrees: 360) : Angle(degrees: 0),
+                                    axis: (x: 0, y: 1, z: 0)
+                                )
+                                .opacity(answer == nil || number == answer ? 1 : 0.25)
+                                .scaleEffect(answer == nil || number == answer ? 1 : 0.8)
                         }
                     }
                 }
@@ -79,6 +89,7 @@ struct ContentView: View {
     }
     
     func flagTapped(_ number: Int) {
+        answer = number
         if number == correctAnswer {
             scoreTitle = "Correct"
             increaseScore()
@@ -98,6 +109,7 @@ struct ContentView: View {
         }
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        answer = nil
     }
     
     func increaseScore() {
