@@ -14,6 +14,9 @@
 4. `BetterRest`
 5. `WordScramble`
 6. 🧪 `‌Animations`
+
+    Milestone: Projects 4-6. Challenge: **`Edutainment`**
+
 7. `‌`
 8. `‌`
 9. `‌`
