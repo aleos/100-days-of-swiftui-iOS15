@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct Question {
-    let question: String
-    let answer: Int
-    
-    init(maxNumber: Int = 10) {
-        precondition((2...12).contains(maxNumber), "Max number must be between 2 and 12.")
-        
-        let numbers = [Int.random(in: 1...maxNumber), Int.random(in: 1...maxNumber)]
-        question = "What is \(numbers[0]) × \(numbers[1])?"
-        answer = numbers[0] * numbers[1]
-    }
-}
-
 struct ContentView: View {
     
     @State var gameIsActive = false
@@ -46,7 +33,7 @@ struct ContentView: View {
                     Text("Choose difficulty")
                 }
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarItem() {
                         Button("Let's start") {
                             startGame()
                             gameIsActive = true
@@ -54,30 +41,14 @@ struct ContentView: View {
                         .background(NavigationLink("", isActive: $gameIsActive, destination: { GameView(questions: questions) }))
                     }
                 }
-                
-//                NavigationLink("Let's start!") { GameView() }
-//                    .listRowBackground(Color.green.opacity(0.5))
             }
             .navigationTitle("Multiplication tables")
+            .navigationViewStyle(.columns)
         }
     }
     
     func startGame() {
         questions = (0..<difficulty).map({ _ in Question(maxNumber: maxNumber) })
-    }
-}
-
-struct GameView: View {
-    let questions: [Question]
-
-    @State var questionNumber = 0
-    @State var answer = 0
-
-    var body: some View {
-        VStack {
-            Text(questions[questionNumber].question)
-            TextField("Your answer", value: $answer, format: .number)
-        }
     }
 }
 
