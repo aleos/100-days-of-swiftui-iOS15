@@ -24,6 +24,7 @@ struct ContentView: View {
                         
                         Spacer()
                         Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                            .foregroundColor(item.amount < 10 ? .primary : item.amount < 100 ? .orange : .red)
                     }
                 }
                 .onDelete(perform: removeItems)
