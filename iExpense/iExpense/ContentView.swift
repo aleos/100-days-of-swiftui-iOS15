@@ -14,20 +14,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                ForEach(expenses.types, id: \.self) { type in
+                    Section {
+                        ForEach(expenses.items.filter { $0.type == type }) { item in
+                            ExpenseRow(item: item)
                         }
-                        
-                        Spacer()
-                        Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                            .foregroundColor(item.amount < 10 ? .primary : item.amount < 100 ? .orange : .red)
+                        .onDelete {
+                            removeItems(at: $0, type: type)
+                        }
+                    } header: {
+                        Text(type)
                     }
                 }
-                .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -44,8 +42,27 @@ struct ContentView: View {
         .navigationViewStyle(.stack)
     }
     
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet, type: String) {
+        let itemsOfType = expenses.items.filter { type == $0.type }
+        let idsToRemove = offsets.map { itemsOfType[$0].id }
+        expenses.items = expenses.items.filter { !idsToRemove.contains($0.id) }
+    }
+    
+    private struct ExpenseRow: View {
+        let item: ExpenseItem
+        var body: some View {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(item.name)
+                        .font(.headline)
+                    Text(item.type)
+                }
+                
+                Spacer()
+                Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    .foregroundColor(item.amount < 10 ? .primary : item.amount < 100 ? .orange : .red)
+            }
+        }
     }
 }
 
