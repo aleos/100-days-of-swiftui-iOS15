@@ -18,7 +18,7 @@
     Milestone: Projects 4-6. Challenge: **`Edutainment`**
 
 7. `‌iExpense`
-8. `‌`
+8. `‌Moonshot`
 9. `‌`
 10. `‌`
 11. `‌`
