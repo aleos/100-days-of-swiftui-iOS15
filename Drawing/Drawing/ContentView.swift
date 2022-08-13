@@ -11,19 +11,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                NavigationLink("🔺 Triangle") {
+                NavigationLink("🔺 Triangle (`Path`)") {
                     Triangle()
                         .stroke(.red, style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
                         .frame(width: 200, height: 200, alignment: .center)
                         .navigationTitle("🔺 Triangle")
                 }
-                NavigationLink("⭕️ Arc") {
+                NavigationLink("⭕️ Arc (`.addArc()`)") {
                     Arc(startAngle: .degrees(0), endAngle: .degrees(300), clockwise: true)
                         .strokeBorder(.red, style: StrokeStyle(lineWidth: 40))
                         .navigationTitle("⭕️ Arc")
                 }
-                NavigationLink("🌼 Flower") { FlowerContentView() }
-                NavigationLink("🖼 Frame") { ImagePaintContentView() }
+                NavigationLink("🌼 Flower (`CGAffineTransform`)") { FlowerContentView() }
+                NavigationLink("🖼 Frame (`ImagePaint`)") { ImagePaintContentView() }
+                NavigationLink("☢️ Gradient (`.drawingGroup()`)") { ColorCyclingCircleContentView() }
                 NavigationLink("Triangle") { Triangle() }
                 NavigationLink("Triangle") { Triangle() }
                 NavigationLink("Triangle") { Triangle() }
@@ -141,6 +142,72 @@ struct ImagePaintContentView: View {
                 .frame(width: 300, height: 200)
         }
         .navigationTitle("🖼 Frame")
+    }
+}
+
+struct ColorCyclingCircle: View {
+    var amount = 0.0
+    let steps = 100
+
+    var body: some View {
+        ZStack {
+            ForEach(0..<steps, id:\.self) { value in
+                Circle()
+                    .inset(by: Double(value))
+                    .strokeBorder(
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                color(for: value, brightness: 1),
+                                color(for: value, brightness: 0.5)
+                            ]),
+                            startPoint: .top,
+                            endPoint: .bottom
+                        ),
+                        lineWidth: 2
+                    )
+            }
+        }
+        .drawingGroup()
+    }
+
+    func color(for value: Int, brightness: Double) -> Color {
+        var targetHue = Double(value) / Double(steps) + amount
+
+        if targetHue > 1 {
+            targetHue -= 1
+        }
+
+        return Color(hue: targetHue, saturation: 1, brightness: brightness)
+    }
+}
+
+struct ColorCyclingCircleContentView: View {
+    @State private var colorCycle = 0.0
+
+    var body: some View {
+        VStack {
+            ColorCyclingCircle(amount: colorCycle)
+                .frame(width: 300, height: 300)
+
+            ZStack {
+                  LinearGradient(
+                      gradient: Gradient(colors: [
+                        Color(hue: 0, saturation: 1, brightness: 1),
+                        Color(hue: 0.5, saturation: 1, brightness: 1),
+                        Color(hue: 1, saturation: 1, brightness: 1)
+                      ]),
+                      startPoint: .leading,
+                      endPoint: .trailing
+                  )
+                  .mask(Slider(value: $colorCycle))
+
+                  // Dummy replicated slider, to allow sliding
+                  Slider(value: $colorCycle)
+                      .accentColor(.clear)
+            }
+        }
+        .padding()
+        .navigationTitle("☢️ Gradient Circle")
     }
 }
 
