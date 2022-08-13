@@ -16,16 +16,18 @@ struct GridLayout: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns) {
-            ForEach(missions) { mission in
-                NavigationLink {
-                    MissionView(mission: mission, astronauts: astronauts)
-                } label: {
-                    GridItemView(mission: mission)
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(missions) { mission in
+                    NavigationLink {
+                        MissionView(mission: mission, astronauts: astronauts)
+                    } label: {
+                        GridItemView(mission: mission)
+                    }
                 }
             }
+            .padding([.horizontal, .bottom])
         }
-        .padding([.horizontal, .bottom])
     }
 }
 
@@ -64,10 +66,8 @@ struct GridLayout_Previews: PreviewProvider {
     static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
 
     static var previews: some View {
-        ScrollView {
-            GridLayout(astronauts: astronauts, missions: missions)
-        }
-        .background(.darkBackground)
-        .preferredColorScheme(.dark)
+        GridLayout(astronauts: astronauts, missions: missions)
+            .background(.darkBackground)
+            .preferredColorScheme(.dark)
     }
 }
