@@ -15,6 +15,8 @@ struct ContentView: View {
         GridItem(.adaptive(minimum: 150))
     ]
     
+    @State private var isGrid = true
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -55,7 +57,16 @@ struct ContentView: View {
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                Button(isGrid ? "Grid" : "List") {
+                    toggleMissionsStyle()
+                }
+            }
         }
+    }
+    
+    func toggleMissionsStyle() {
+        isGrid.toggle()
     }
 }
 
