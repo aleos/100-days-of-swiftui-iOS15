@@ -74,7 +74,7 @@ struct MissionView: View {
                 HStack {
                     ForEach(crew, id: \.role) { crewMember in
                         NavigationLink {
-                            Text("Astronaut details")
+                            AstronautView(astronaut: crewMember.astronaut)
                         } label: {
                             HStack {
                                 Image(crewMember.astronaut.id)
@@ -125,5 +125,3 @@ struct MissionView_Previews: PreviewProvider {
             .previewInterfaceOrientation(.portrait)
     }
 }
-
-
