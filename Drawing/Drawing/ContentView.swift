@@ -26,7 +26,7 @@ struct ContentView: View {
                 NavigationLink("🖼 Frame (`ImagePaint`)") { ImagePaintView() }
                 NavigationLink("☢️ Gradient (`.drawingGroup()`)") { ColorCyclingCircleView() }
                 NavigationLink("🚦 Blend Modes (`.blendMode()`)") { BlendModesView() }
-                NavigationLink("Triangle") { Triangle() }
+                NavigationLink("🪤 Trapezoid (`AnimatableData`)") { TrapezoidView() }
                 NavigationLink("Triangle") { Triangle() }
                 NavigationLink("Triangle") { Triangle() }
                 NavigationLink("Triangle") { Triangle() }
