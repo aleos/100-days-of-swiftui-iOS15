@@ -9,7 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        FlowerContentView()
+        NavigationView {
+            Form {
+                NavigationLink("🔺 Triangle") {
+                    Triangle()
+                        .stroke(.red, style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .navigationTitle("🔺 Triangle")
+                }
+                NavigationLink("⭕️ Arc") {
+                    Arc(startAngle: .degrees(0), endAngle: .degrees(300), clockwise: true)
+                        .strokeBorder(.red, style: StrokeStyle(lineWidth: 40))
+                        .navigationTitle("⭕️ Arc")
+                }
+                NavigationLink("🌼 Flower") { FlowerContentView() }
+                NavigationLink("Triangle") { Triangle() }
+                NavigationLink("Triangle") { Triangle() }
+                NavigationLink("Triangle") { Triangle() }
+                NavigationLink("Triangle") { Triangle() }
+            }
+            .navigationTitle("🎨 Drawing")
+        }
     }
 }
 
@@ -92,7 +112,7 @@ struct FlowerContentView: View {
     var body: some View {
         VStack {
             Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(.red, style: FillStyle(eoFill: true))
+                .fill(.orange, style: FillStyle(eoFill: true))
 
             Text("Offset")
             Slider(value: $petalOffset, in: -40...40)
@@ -102,9 +122,13 @@ struct FlowerContentView: View {
             Slider(value: $petalWidth, in: 0...100)
                 .padding(.horizontal)
         }
+        .tint(.orange)
+        .padding()
+        .navigationTitle("🌼 Flower")
     }
 }
 
+// MARK: - Previews
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
