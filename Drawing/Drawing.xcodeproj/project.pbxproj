@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5719DEAF28A81B05004A92CD /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEAE28A81B05004A92CD /* Triangle.swift */; };
+		5719DEB128A81B2B004A92CD /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB028A81B2B004A92CD /* Arc.swift */; };
+		5719DEB328A81B58004A92CD /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB228A81B58004A92CD /* FlowerView.swift */; };
+		5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB428A81BCD004A92CD /* ImagePaintView.swift */; };
+		5719DEB928A81CC0004A92CD /* ColorCyclingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */; };
+		5719DEBB28A81D06004A92CD /* BlendModesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEBA28A81D06004A92CD /* BlendModesView.swift */; };
 		57E920A328A7C45400A3537E /* DrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E920A228A7C45400A3537E /* DrawingApp.swift */; };
 		57E920A528A7C45400A3537E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E920A428A7C45400A3537E /* ContentView.swift */; };
 		57E920A728A7C45400A3537E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E920A628A7C45400A3537E /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5719DEAE28A81B05004A92CD /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		5719DEB028A81B2B004A92CD /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		5719DEB228A81B58004A92CD /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
+		5719DEB428A81BCD004A92CD /* ImagePaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintView.swift; sourceTree = "<group>"; };
+		5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircleView.swift; sourceTree = "<group>"; };
+		5719DEBA28A81D06004A92CD /* BlendModesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModesView.swift; sourceTree = "<group>"; };
 		57E9209F28A7C45400A3537E /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E920A228A7C45400A3537E /* DrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingApp.swift; sourceTree = "<group>"; };
 		57E920A428A7C45400A3537E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +65,12 @@
 			children = (
 				57E920A228A7C45400A3537E /* DrawingApp.swift */,
 				57E920A428A7C45400A3537E /* ContentView.swift */,
+				5719DEAE28A81B05004A92CD /* Triangle.swift */,
+				5719DEB028A81B2B004A92CD /* Arc.swift */,
+				5719DEB228A81B58004A92CD /* FlowerView.swift */,
+				5719DEB428A81BCD004A92CD /* ImagePaintView.swift */,
+				5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */,
+				5719DEBA28A81D06004A92CD /* BlendModesView.swift */,
 				57E920A628A7C45400A3537E /* Assets.xcassets */,
 				57E920A828A7C45400A3537E /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */,
+				5719DEAF28A81B05004A92CD /* Triangle.swift in Sources */,
+				5719DEB928A81CC0004A92CD /* ColorCyclingCircleView.swift in Sources */,
 				57E920A528A7C45400A3537E /* ContentView.swift in Sources */,
+				5719DEB328A81B58004A92CD /* FlowerView.swift in Sources */,
+				5719DEB128A81B2B004A92CD /* Arc.swift in Sources */,
 				57E920A328A7C45400A3537E /* DrawingApp.swift in Sources */,
+				5719DEBB28A81D06004A92CD /* BlendModesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
