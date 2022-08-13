@@ -19,6 +19,7 @@
 		57C47A6428A597D40039DCBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C47A6328A597D40039DCBB /* ContentView.swift */; };
 		57C47A6628A597D60039DCBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C47A6528A597D60039DCBB /* Assets.xcassets */; };
 		57C47A6928A597D60039DCBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C47A6828A597D60039DCBB /* Preview Assets.xcassets */; };
+		57D323EB28A7B7EA00D35BA3 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D323EA28A7B7EA00D35BA3 /* GridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		57C47A6328A597D40039DCBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57C47A6528A597D60039DCBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C47A6828A597D60039DCBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57D323EA28A7B7EA00D35BA3 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				57C47A6128A597D40039DCBB /* MoonshotApp.swift */,
 				57C47A6328A597D40039DCBB /* ContentView.swift */,
+				57D323EA28A7B7EA00D35BA3 /* GridLayout.swift */,
 				5747796428A799E10016004F /* MissionView.swift */,
 				5747796628A7B0FF0016004F /* AstronautView.swift */,
 				5747796228A6DD800016004F /* Color-Theme.swift */,
@@ -169,6 +172,7 @@
 				5747796328A6DD800016004F /* Color-Theme.swift in Sources */,
 				57C47A6428A597D40039DCBB /* ContentView.swift in Sources */,
 				57C47A6228A597D40039DCBB /* MoonshotApp.swift in Sources */,
+				57D323EB28A7B7EA00D35BA3 /* GridLayout.swift in Sources */,
 				5747796128A6C2F10016004F /* Mission.swift in Sources */,
 				5747795F28A6C0C70016004F /* Bundle-Decodable.swift in Sources */,
 			);
