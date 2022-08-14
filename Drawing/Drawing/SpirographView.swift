@@ -28,9 +28,9 @@ struct Spirograph: Shape {
 
     func path(in rect: CGRect) -> Path {
         let divisor = gcd(innerRadius, outerRadius)
-        let outerRadius = Double(self.outerRadius)
-        let innerRadius = Double(self.innerRadius)
-        let distance = Double(self.distance)
+        let outerRadius = Double(outerRadius)
+        let innerRadius = Double(innerRadius)
+        let distance = Double(distance)
         let difference = innerRadius - outerRadius
         let endPoint = ceil(2 * Double.pi * outerRadius / Double(divisor)) * amount
 
