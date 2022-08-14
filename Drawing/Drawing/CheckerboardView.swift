@@ -69,6 +69,5 @@ struct CheckerboardView_Previews: PreviewProvider {
             CheckerboardView()
         }
         .preferredColorScheme(.dark)
-
     }
 }

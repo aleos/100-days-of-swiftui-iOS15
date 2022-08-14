@@ -28,8 +28,7 @@ struct ContentView: View {
                 NavigationLink("🚦 Blend Modes (`.blendMode()`)") { BlendModesView() }
                 NavigationLink("🪤 Trapezoid (`AnimatableData`)") { TrapezoidView() }
                 NavigationLink("🏁 Board (`AnimatablePair`)") { CheckerboardView() }
-                NavigationLink("Triangle") { Triangle() }
-                NavigationLink("Triangle") { Triangle() }
+                NavigationLink("🌀 Spirograph") { SpirographView() }
             }
             .navigationTitle("🎨 Drawing")
         }
