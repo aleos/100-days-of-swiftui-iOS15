@@ -11,7 +11,7 @@
 		5719DEB128A81B2B004A92CD /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB028A81B2B004A92CD /* Arc.swift */; };
 		5719DEB328A81B58004A92CD /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB228A81B58004A92CD /* FlowerView.swift */; };
 		5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB428A81BCD004A92CD /* ImagePaintView.swift */; };
-		5719DEB928A81CC0004A92CD /* ColorCyclingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */; };
+		5719DEB928A81CC0004A92CD /* ColorCyclingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB828A81CC0004A92CD /* ColorCyclingView.swift */; };
 		5719DEBB28A81D06004A92CD /* BlendModesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEBA28A81D06004A92CD /* BlendModesView.swift */; };
 		5719DEBD28A81D92004A92CD /* TrapezoidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEBC28A81D92004A92CD /* TrapezoidView.swift */; };
 		5719DEBF28A8219A004A92CD /* CheckerboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEBE28A8219A004A92CD /* CheckerboardView.swift */; };
@@ -27,7 +27,7 @@
 		5719DEB028A81B2B004A92CD /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		5719DEB228A81B58004A92CD /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		5719DEB428A81BCD004A92CD /* ImagePaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintView.swift; sourceTree = "<group>"; };
-		5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircleView.swift; sourceTree = "<group>"; };
+		5719DEB828A81CC0004A92CD /* ColorCyclingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingView.swift; sourceTree = "<group>"; };
 		5719DEBA28A81D06004A92CD /* BlendModesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModesView.swift; sourceTree = "<group>"; };
 		5719DEBC28A81D92004A92CD /* TrapezoidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapezoidView.swift; sourceTree = "<group>"; };
 		5719DEBE28A8219A004A92CD /* CheckerboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerboardView.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				5719DEB028A81B2B004A92CD /* Arc.swift */,
 				5719DEB228A81B58004A92CD /* FlowerView.swift */,
 				5719DEB428A81BCD004A92CD /* ImagePaintView.swift */,
-				5719DEB828A81CC0004A92CD /* ColorCyclingCircleView.swift */,
+				5719DEB828A81CC0004A92CD /* ColorCyclingView.swift */,
 				5719DEBA28A81D06004A92CD /* BlendModesView.swift */,
 				5719DEBC28A81D92004A92CD /* TrapezoidView.swift */,
 				5719DEBE28A8219A004A92CD /* CheckerboardView.swift */,
@@ -167,7 +167,7 @@
 				5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */,
 				5719DEAF28A81B05004A92CD /* ShapesView.swift in Sources */,
 				5719DEBF28A8219A004A92CD /* CheckerboardView.swift in Sources */,
-				5719DEB928A81CC0004A92CD /* ColorCyclingCircleView.swift in Sources */,
+				5719DEB928A81CC0004A92CD /* ColorCyclingView.swift in Sources */,
 				5719DEBD28A81D92004A92CD /* TrapezoidView.swift in Sources */,
 				57E920A528A7C45400A3537E /* ContentView.swift in Sources */,
 				5719DEB328A81B58004A92CD /* FlowerView.swift in Sources */,

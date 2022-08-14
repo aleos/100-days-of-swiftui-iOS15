@@ -21,7 +21,7 @@ struct ContentView: View {
                 }
                 NavigationLink("🌼 Flower (`CGAffineTransform`)") { FlowerView() }
                 NavigationLink("🖼 Frame (`ImagePaint`)") { ImagePaintView() }
-                NavigationLink("☢️ Gradient (`.drawingGroup()`)") { ColorCyclingCircleView() }
+                NavigationLink("☢️ Gradient (`.drawingGroup()`)") { ColorCyclingView() }
                 NavigationLink("🚦 Blend Modes (`.blendMode()`)") { BlendModesView() }
                 NavigationLink("🪤 Trapezoid (`AnimatableData`)") { TrapezoidView() }
                 NavigationLink("🏁 Board (`AnimatablePair`)") { CheckerboardView() }
