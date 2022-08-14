@@ -11,11 +11,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                NavigationLink("🔺 Triangle (`Path`)") {
-                    Triangle()
-                        .stroke(.red, style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
-                        .frame(width: 200, height: 200, alignment: .center)
-                        .navigationTitle("🔺 Triangle")
+                NavigationLink("💘 Shapes (`Path`)") {
+                    ShapesView()
                 }
                 NavigationLink("⭕️ Arc (`.addArc()`)") {
                     Arc(startAngle: .degrees(0), endAngle: .degrees(300), clockwise: true)

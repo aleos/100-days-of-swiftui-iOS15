@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5719DEAF28A81B05004A92CD /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEAE28A81B05004A92CD /* Triangle.swift */; };
+		5719DEAF28A81B05004A92CD /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEAE28A81B05004A92CD /* ShapesView.swift */; };
 		5719DEB128A81B2B004A92CD /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB028A81B2B004A92CD /* Arc.swift */; };
 		5719DEB328A81B58004A92CD /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB228A81B58004A92CD /* FlowerView.swift */; };
 		5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5719DEB428A81BCD004A92CD /* ImagePaintView.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5719DEAE28A81B05004A92CD /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		5719DEAE28A81B05004A92CD /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
 		5719DEB028A81B2B004A92CD /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		5719DEB228A81B58004A92CD /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		5719DEB428A81BCD004A92CD /* ImagePaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			children = (
 				57E920A228A7C45400A3537E /* DrawingApp.swift */,
 				57E920A428A7C45400A3537E /* ContentView.swift */,
-				5719DEAE28A81B05004A92CD /* Triangle.swift */,
+				5719DEAE28A81B05004A92CD /* ShapesView.swift */,
 				5719DEB028A81B2B004A92CD /* Arc.swift */,
 				5719DEB228A81B58004A92CD /* FlowerView.swift */,
 				5719DEB428A81BCD004A92CD /* ImagePaintView.swift */,
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5719DEB528A81BCD004A92CD /* ImagePaintView.swift in Sources */,
-				5719DEAF28A81B05004A92CD /* Triangle.swift in Sources */,
+				5719DEAF28A81B05004A92CD /* ShapesView.swift in Sources */,
 				5719DEBF28A8219A004A92CD /* CheckerboardView.swift in Sources */,
 				5719DEB928A81CC0004A92CD /* ColorCyclingCircleView.swift in Sources */,
 				5719DEBD28A81D92004A92CD /* TrapezoidView.swift in Sources */,
