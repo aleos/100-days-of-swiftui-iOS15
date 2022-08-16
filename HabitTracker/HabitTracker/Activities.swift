@@ -8,5 +8,5 @@
 import Foundation
 
 class Activities: ObservableObject {
-    @Published activities: [Activity] = []
+    @Published var activities: [Activity] = [Activity(), Activity()]
 }

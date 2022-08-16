@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var activities = Activities()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(activities.activities) { activity in
+            Text("Activity \(activity.id)")
+        }
+        .navigationTitle("Activities")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            ContentView()
+        }
     }
 }
