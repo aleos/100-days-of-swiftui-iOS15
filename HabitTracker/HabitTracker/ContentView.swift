@@ -11,7 +11,12 @@ struct ContentView: View {
     @StateObject var activities = Activities()
     var body: some View {
         List(activities.activities) { activity in
-            Text("Activity \(activity.id)")
+            NavigationLink {
+                Text("Activity description")
+                    .navigationTitle("Test Activity")
+            } label: {
+                Text("Activity \(activity.id)")
+            }
         }
         .navigationTitle("Activities")
     }
