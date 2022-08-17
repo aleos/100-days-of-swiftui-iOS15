@@ -20,7 +20,10 @@
 7. `‌iExpense`
 8. `‌Moonshot`
 9. 🧪 `‌Drawing`
-10. `‌HabitTracker`
+
+	Milestone: Projects 7-9, Challenge: **‌`HabitTracker`**
+
+10. ``
 11. `‌`
 12. `‌`
 13. `‌`
