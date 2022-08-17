@@ -9,23 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var activities = Activities()
+    
+    @State private var showingAddActivity = false
+    
     var body: some View {
-        List(activities.activities) { activity in
-            NavigationLink {
-                Text("Activity description")
-                    .navigationTitle("Test Activity")
-            } label: {
-                Text("Activity \(activity.id)")
+        NavigationView {
+            List(activities.activities) { activity in
+                NavigationLink {
+                    ActivityView(activity: activity)
+                } label: {
+                    Text(activity.name)
+                }
             }
+            .toolbar {
+                Button {
+                    showingAddActivity = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showingAddActivity) {
+                AddActivityView(activities: activities)
+            }
+            .navigationTitle("Activities")
         }
-        .navigationTitle("Activities")
+        .navigationViewStyle(.stack)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ContentView()
-        }
+        ContentView()
     }
 }

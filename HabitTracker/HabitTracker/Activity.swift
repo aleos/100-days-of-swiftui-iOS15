@@ -9,4 +9,6 @@ import Foundation
 
 struct Activity: Codable, Identifiable {
     var id = UUID()
+    var name: String
+    var description: String
 }

@@ -8,5 +8,10 @@
 import Foundation
 
 class Activities: ObservableObject {
-    @Published var activities: [Activity] = [Activity(), Activity()]
+    @Published var activities: [Activity] = []
+    
+    // MARK: Intents
+    func add(_ name: String, description: String) {
+        activities.append(Activity(name: name, description: description))
+    }
 }

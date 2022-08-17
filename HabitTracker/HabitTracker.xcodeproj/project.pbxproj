@@ -13,6 +13,8 @@
 		57230E3728AAE20F005346E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57230E3628AAE20F005346E7 /* Preview Assets.xcassets */; };
 		57B92B4828AC33A000096469 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B92B4728AC33A000096469 /* Activity.swift */; };
 		57B92B4A28AC33B700096469 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B92B4928AC33B700096469 /* Activities.swift */; };
+		57EDF37228AD59A4002ABCA0 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDF37128AD59A4002ABCA0 /* AddActivityView.swift */; };
+		57EDF37428AD5D5C002ABCA0 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EDF37328AD5D5C002ABCA0 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		57230E3628AAE20F005346E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57B92B4728AC33A000096469 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		57B92B4928AC33B700096469 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		57EDF37128AD59A4002ABCA0 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
+		57EDF37328AD5D5C002ABCA0 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				57230E2F28AAE20D005346E7 /* HabitTrackerApp.swift */,
 				57230E3128AAE20D005346E7 /* ContentView.swift */,
+				57EDF37328AD5D5C002ABCA0 /* ActivityView.swift */,
+				57EDF37128AD59A4002ABCA0 /* AddActivityView.swift */,
 				57B92B4728AC33A000096469 /* Activity.swift */,
 				57B92B4928AC33B700096469 /* Activities.swift */,
 				57230E3328AAE20F005346E7 /* Assets.xcassets */,
@@ -147,6 +153,8 @@
 				57B92B4828AC33A000096469 /* Activity.swift in Sources */,
 				57230E3228AAE20D005346E7 /* ContentView.swift in Sources */,
 				57230E3028AAE20D005346E7 /* HabitTrackerApp.swift in Sources */,
+				57EDF37228AD59A4002ABCA0 /* AddActivityView.swift in Sources */,
+				57EDF37428AD5D5C002ABCA0 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
