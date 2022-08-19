@@ -25,6 +25,7 @@ struct AddressView: View {
                 } label: {
                     Text("Check out")
                 }
+                .disabled(order.hasValidAddress == false)
             }
         }
         .navigationTitle("Delivery details")
@@ -34,6 +35,8 @@ struct AddressView: View {
 
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressView(order: Order())
+        NavigationView {
+            AddressView(order: Order())
+        }
     }
 }
