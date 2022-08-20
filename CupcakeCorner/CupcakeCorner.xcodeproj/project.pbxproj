@@ -14,6 +14,7 @@
 		57A503F428AEB45B00CE2ED5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A503F328AEB45B00CE2ED5 /* ContentView.swift */; };
 		57A503F628AEB45C00CE2ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A503F528AEB45C00CE2ED5 /* Assets.xcassets */; };
 		57A503F928AEB45C00CE2ED5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A503F828AEB45C00CE2ED5 /* Preview Assets.xcassets */; };
+		57B0506228B138B40068CCAA /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0506128B138B40068CCAA /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		57A503F328AEB45B00CE2ED5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57A503F528AEB45C00CE2ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A503F828AEB45C00CE2ED5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57B0506128B138B40068CCAA /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				57A503F128AEB45B00CE2ED5 /* CupcakeCornerApp.swift */,
 				57A503F328AEB45B00CE2ED5 /* ContentView.swift */,
 				574AD67C28B02BCD00F11444 /* Order.swift */,
+				57B0506128B138B40068CCAA /* OrderViewModel.swift */,
 				574AD67E28B02E4500F11444 /* AddressView.swift */,
 				574AD68028B02F1200F11444 /* CheckoutView.swift */,
 				57A503F528AEB45C00CE2ED5 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				574AD67D28B02BCD00F11444 /* Order.swift in Sources */,
 				574AD67F28B02E4500F11444 /* AddressView.swift in Sources */,
 				574AD68128B02F1200F11444 /* CheckoutView.swift in Sources */,
+				57B0506228B138B40068CCAA /* OrderViewModel.swift in Sources */,
 				57A503F428AEB45B00CE2ED5 /* ContentView.swift in Sources */,
 				57A503F228AEB45B00CE2ED5 /* CupcakeCornerApp.swift in Sources */,
 			);
