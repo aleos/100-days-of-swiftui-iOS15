@@ -39,13 +39,10 @@ struct CheckoutView: View {
         }
         .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Thank you!", isPresented: $showingConfirmation) {
-            Button("OK") { }
-        } message: {
+        .alert("Thank you!", isPresented: $showingConfirmation) { } message: {
             Text(confirmationMessage)
         }
-        .alert("Checkout failed.", isPresented: $showingError) {
-        } message: {
+        .alert("Oops!", isPresented: $showingError) { } message: {
             Text(errorMessage)
         }
     }
@@ -67,7 +64,7 @@ struct CheckoutView: View {
             confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
         } catch {
-            errorMessage = "Please try again later"
+            errorMessage = "Sorry, checkout failed.\n\nMessage: \(error.localizedDescription)"
             showingError = true
         }
     }
