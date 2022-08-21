@@ -8,32 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var orderViewModel = OrderViewModel()
+    @StateObject var order = SharedOrder()
 
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Picker("Select your cake type", selection: $orderViewModel.order.type) {
-                        ForEach(Order.types.indices, id: \.self) {
-                            Text(Order.types[$0])
+                    Picker("Select your cake type", selection: $order.data.type) {
+                        ForEach(SharedOrder.types.indices, id: \.self) {
+                            Text(SharedOrder.types[$0])
                         }
                     }
 
-                    Stepper("Number of cakes: \(orderViewModel.order.quantity)", value: $orderViewModel.order.quantity, in: 3...20)
+                    Stepper("Number of cakes: \(order.data.quantity)", value: $order.data.quantity, in: 3...20)
                 }
                 Section {
-                    Toggle("Any special requests?", isOn: $orderViewModel.order.specialRequestEnabled.animation())
+                    Toggle("Any special requests?", isOn: $order.data.specialRequestEnabled.animation())
 
-                    if orderViewModel.order.specialRequestEnabled {
-                        Toggle("Add extra frosting", isOn: $orderViewModel.order.extraFrosting)
+                    if order.data.specialRequestEnabled {
+                        Toggle("Add extra frosting", isOn: $order.data.extraFrosting)
 
-                        Toggle("Add extra sprinkles", isOn: $orderViewModel.order.addSprinkles)
+                        Toggle("Add extra sprinkles", isOn: $order.data.addSprinkles)
                     }
                 }
                 Section {
                     NavigationLink {
-                        AddressView(orderViewModel: orderViewModel)
+                        AddressView(order: order)
                     } label: {
                         Text("Delivery details")
                     }
