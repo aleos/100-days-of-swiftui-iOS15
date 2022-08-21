@@ -37,11 +37,11 @@ struct ContentView: View {
                     .font(.system(size: 64))
                     .padding()
                 Group {
-                    Text("You should ")
-                    + Text("\(shouldWin ? "win" : "lose")")
+                    Text("Which one ")
+                    + Text("\(shouldWin ? "wins" : "loses")")
                         .foregroundColor(shouldWin ? .green : .red)
                         .fontWeight(.black)
-                    + Text(" now")
+                    + Text("?")
                 }
                 .font(.title)
             }
