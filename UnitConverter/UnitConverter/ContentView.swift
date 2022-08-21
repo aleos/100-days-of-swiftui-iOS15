@@ -37,6 +37,13 @@ struct ContentView: View {
         Measurement(value: input, unit: inputUnit).converted(to: outputUnit)
     }
     
+    private static let formatter: MeasurementFormatter = {
+        let formatter = MeasurementFormatter()
+        formatter.unitOptions = .providedUnit
+        formatter.unitStyle = .medium
+        return formatter
+    }()
+    
     var body: some View {
         NavigationView {
             Form {
@@ -56,12 +63,12 @@ struct ContentView: View {
                     }
                     Picker("From", selection: $inputUnit) {
                         ForEach(dimension.units, id: \.self) {
-                            Text("\($0.symbol)").tag($0)
+                            Text("\(Self.formatter.string(from: $0))").tag($0)
                         }
                     }
                     Picker("To", selection: $outputUnit) {
                         ForEach(dimension.units, id: \.self) {
-                            Text("\($0.symbol)").tag($0)
+                            Text("\(Self.formatter.string(from: $0))").tag($0)
                         }
                     }
                 } header: {
