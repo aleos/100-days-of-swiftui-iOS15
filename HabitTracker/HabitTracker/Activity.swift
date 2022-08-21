@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Activity: Codable, Identifiable {
+struct Activity: Codable, Identifiable, Equatable {
     var id = UUID()
-    var name: String
+    var title: String
     var description: String
+    var completionCount = 0
 }

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct AddActivityView: View {
-    @ObservedObject var activities: Activities
+    @ObservedObject var data: Activities
     @Environment(\.dismiss) var dismiss
     
-    @State private var name = ""
+    @State private var title = ""
     @State private var description = ""
     
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Name", text: $name)
+                TextField("Name", text: $title)
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding([.top, .bottom], 20)
@@ -27,17 +27,17 @@ struct AddActivityView: View {
             .padding()
             .toolbar {
                 Button("Save") {
-                    activities.add(name, description: description)
+                    data.add(title, description: description)
                     dismiss()
                 }
             }
-            .navigationTitle("Add new activity")
+            .navigationTitle("Add Activity")
         }
     }
 }
 
 struct AddActivityView_Previews: PreviewProvider {
     static var previews: some View {
-        AddActivityView(activities: Activities())
+        AddActivityView(data: Activities())
     }
 }

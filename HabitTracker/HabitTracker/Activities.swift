@@ -22,6 +22,15 @@ class Activities: ObservableObject {
     
     // MARK: Intents
     func add(_ name: String, description: String) {
-        activities.append(Activity(name: name, description: description))
+        activities.append(Activity(title: name, description: description))
+    }
+    
+    func complete(activity: Activity) {
+        var newActivity = activity
+        newActivity.completionCount += 1
+
+        if let index = activities.firstIndex(of: activity) {
+            activities[index] = newActivity
+        }
     }
 }
