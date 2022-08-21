@@ -95,7 +95,7 @@ struct ContentView: View {
 
 private extension ContentView {
     enum Move: String, CaseIterable {
-        case rock = "🪨", paper = "📃", scissors = "✂️"
+        case rock = "✊", paper = "✋", scissors = "✌️"
         func wins(over move: Move) -> Bool {
             switch self {
             case .rock: return move == .scissors
