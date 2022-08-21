@@ -13,10 +13,10 @@ struct AddressView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Name", text: $order.data.name)
-                TextField("Street Address", text: $order.data.streetAddress)
-                TextField("City", text: $order.data.city)
-                TextField("Zip", text: $order.data.zip)
+                TextField("Name", text: $order.name)
+                TextField("Street Address", text: $order.streetAddress)
+                TextField("City", text: $order.city)
+                TextField("Zip", text: $order.zip)
             }
 
             Section {
@@ -25,7 +25,7 @@ struct AddressView: View {
                 } label: {
                     Text("Check out")
                 }
-                .disabled(order.data.hasValidAddress == false)
+                .disabled(order.hasValidAddress == false)
             }
         }
         .navigationTitle("Delivery details")
