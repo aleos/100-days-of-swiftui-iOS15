@@ -43,4 +43,7 @@
    <FileRef
       location = "group:CupcakeCorner/CupcakeCorner.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Bookworm/Bookworm.xcodeproj">
+   </FileRef>
 </Workspace>
