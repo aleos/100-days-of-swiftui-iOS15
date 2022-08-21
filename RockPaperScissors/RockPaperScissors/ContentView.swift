@@ -7,21 +7,12 @@
 
 import SwiftUI
 
-//To solve this challenge you’ll need to draw on skills you learned in tutorials 1 and 2:
-//
-//Start with an App template, then create a property to store the three possible moves: rock, paper, and scissors.
-//You’ll need to create two @State properties to store the app’s current choice and whether the player should win or lose.
-//You can use Int.random(in:) to select a random move. You can use it for whether the player should win too if you want, but there’s an even easier choice: Bool.random() is randomly true or false. After the initial value, use toggle() between rounds so it’s always changing.
-//Create a VStack showing the player’s score, the app’s move, and whether the player should win or lose. You can use if shouldWin to return one of two different text views.
-//The important part is making three buttons that respond to the player’s move: Rock, Paper, or Scissors.
-//Use the font() modifier to adjust the size of your text. If you’re using emoji for the three moves, they also scale. Tip: You can ask for very large system fonts using .font(.system(size: 200)) – they’ll be a fixed size, but at least you can make sure they are nice and big!
-
 struct ContentView: View {
     @State private var currentMove = Move.allCases.randomElement()!
     @State private var shouldWin = Bool.random()
     
     @State private var score = 0
-    @State private var round = 0
+    @State private var round = 1
     @State private var showingScore = false
     
     var body: some View {
@@ -68,13 +59,11 @@ struct ContentView: View {
     }
     
     private func choose(_ move: Move) {
-        round += 1
-        if shouldWin && move.wins(over: currentMove) || !shouldWin && move.loses(to: currentMove) {
-            score += 1
-        } else {
-            score -= 1
-        }
+        let didWin = shouldWin ? move.wins(over: currentMove) : move.loses(to: currentMove)
+        score += didWin ? 1 : -1
+        
         if round < 10 {
+            round += 1
             randomise()
         } else {
             showingScore = true
@@ -83,7 +72,7 @@ struct ContentView: View {
     
     func resetGame() {
         randomise()
-        round = 0
+        round = 1
         score = 0
     }
     
@@ -103,13 +92,7 @@ private extension ContentView {
             case .scissors: return move == .paper
             }
         }
-        func loses(to move: Move) -> Bool {
-            switch self {
-            case .rock: return move == .paper
-            case .paper: return move == .scissors
-            case .scissors: return move == .rock
-            }
-        }
+        func loses(to move: Move) -> Bool { move.wins(over: self) }
     }
 }
 
