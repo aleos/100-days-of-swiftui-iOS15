@@ -30,10 +30,11 @@ struct Order: Codable {
     var zip = ""
     
     var hasValidAddress: Bool {
-        !(name.trimmingCharacters(in: .whitespaces).isEmpty
-        || streetAddress.trimmingCharacters(in: .whitespaces).isEmpty
-        || city.trimmingCharacters(in: .whitespaces).isEmpty
-        || zip.trimmingCharacters(in: .whitespaces).isEmpty)
+        if name.isReallyEmpty || streetAddress.isReallyEmpty || city.isReallyEmpty || zip.isReallyEmpty {
+            return false
+        }
+
+        return true
     }
     
     var cost: Double {

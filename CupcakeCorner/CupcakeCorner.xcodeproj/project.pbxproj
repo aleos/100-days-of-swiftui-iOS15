@@ -10,6 +10,7 @@
 		574AD67D28B02BCD00F11444 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574AD67C28B02BCD00F11444 /* Order.swift */; };
 		574AD67F28B02E4500F11444 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574AD67E28B02E4500F11444 /* AddressView.swift */; };
 		574AD68128B02F1200F11444 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574AD68028B02F1200F11444 /* CheckoutView.swift */; };
+		578A226728B22F8B007CC87F /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578A226628B22F8B007CC87F /* String-EmptyChecking.swift */; };
 		57A503F228AEB45B00CE2ED5 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A503F128AEB45B00CE2ED5 /* CupcakeCornerApp.swift */; };
 		57A503F428AEB45B00CE2ED5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A503F328AEB45B00CE2ED5 /* ContentView.swift */; };
 		57A503F628AEB45C00CE2ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A503F528AEB45C00CE2ED5 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		574AD67C28B02BCD00F11444 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		574AD67E28B02E4500F11444 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		574AD68028B02F1200F11444 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		578A226628B22F8B007CC87F /* String-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
 		57A503EE28AEB45B00CE2ED5 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A503F128AEB45B00CE2ED5 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		57A503F328AEB45B00CE2ED5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				57B0506128B138B40068CCAA /* OrderViewModel.swift */,
 				574AD67E28B02E4500F11444 /* AddressView.swift */,
 				574AD68028B02F1200F11444 /* CheckoutView.swift */,
+				578A226628B22F8B007CC87F /* String-EmptyChecking.swift */,
 				57A503F528AEB45C00CE2ED5 /* Assets.xcassets */,
 				57A503F728AEB45C00CE2ED5 /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 				574AD68128B02F1200F11444 /* CheckoutView.swift in Sources */,
 				57B0506228B138B40068CCAA /* OrderViewModel.swift in Sources */,
 				57A503F428AEB45B00CE2ED5 /* ContentView.swift in Sources */,
+				578A226728B22F8B007CC87F /* String-EmptyChecking.swift in Sources */,
 				57A503F228AEB45B00CE2ED5 /* CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
