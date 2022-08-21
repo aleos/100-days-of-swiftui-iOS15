@@ -9,21 +9,21 @@
 2. `GuessTheFlag`
 3. 🧪 `ViewsAndModifiers`
 
-	Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
+	Consolidation II. Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
 		
 4. `BetterRest`
 5. `WordScramble`
 6. 🧪 `‌Animations`
 
-    Milestone: Projects 4-6. Challenge: **`Edutainment`**
+    Consolidation III. Milestone: Projects 4-6. Challenge: **`Edutainment`**
 
 7. `‌iExpense`
 8. `‌Moonshot`
 9. 🧪 `‌Drawing`
 
-	Milestone: Projects 7-9, Challenge: **‌`HabitTracker`**
+	Consolidation IV. Milestone: Projects 7-9, Challenge: **‌`HabitTracker`**
 
-10. ``
+10. `CupcakeCorner`
 11. `‌`
 12. `‌`
 13. `‌`
