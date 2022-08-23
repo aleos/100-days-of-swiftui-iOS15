@@ -19,6 +19,10 @@ struct AddBookView: View {
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
+    private var isValid: Bool {
+        !title.isEmpty && !author.isEmpty && !genre.isEmpty
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -53,6 +57,7 @@ struct AddBookView: View {
                         try? moc.save()
                         dismiss()
                     }
+                    .disabled(!isValid)
                 }
             }
             .navigationTitle("Add Book")
