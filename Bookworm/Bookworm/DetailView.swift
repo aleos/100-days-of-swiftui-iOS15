@@ -41,6 +41,12 @@ struct DetailView: View {
 
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            if let date = book.date {
+                Text("Added: \(date.formatted(.dateTime.year().month().day()))")
+                    .font(.caption)
+                    .padding([.vertical])
+            }
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)
@@ -77,6 +83,7 @@ struct DetailView_Previews: PreviewProvider {
         book.genre = "Fantasy"
         book.rating = 4
         book.review = "This was a great book; I really enjoyed it."
+        book.date = Date.now
 
         return NavigationView {
             DetailView(book: book)
