@@ -46,4 +46,7 @@
    <FileRef
       location = "group:Bookworm/Bookworm.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CoreDataProject/CoreDataProject.xcodeproj">
+   </FileRef>
 </Workspace>
