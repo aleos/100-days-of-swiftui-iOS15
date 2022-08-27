@@ -11,18 +11,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🥇 Unique by constraints") { UniqueView() }
-                NavigationLink("🖇 Filtering") { FilteringView() }
-                NavigationLink("🖇 DynamicFiltering") { DynamicFilteringView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🧑‍🎓 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🧙‍♂️ Unique by constraints") { UniqueView() }
+                NavigationLink("🛸 Filtering") { FilteringView() }
+                NavigationLink("🧑‍🎤 DynamicFiltering") { DynamicFilteringView() }
+                NavigationLink("🍭 One-to-Many Relationship") { OneToManyView() }
             }
-            .navigationTitle("🗄️ Core Data")
+            .navigationTitle("🫙 Core Data")
         }
         .navigationViewStyle(.stack)
     }

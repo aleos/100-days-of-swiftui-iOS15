@@ -18,7 +18,7 @@ struct ForEachIDSelfView: View {
         List(students, id: \.self) { student in
             Text(student.name)
         }
-        .navigationTitle("🆔 ForEach id \\.self")
+        .navigationTitle("🧑‍🎓 ForEach id \\.self")
     }
 }
 

@@ -41,7 +41,7 @@ struct DynamicFilteringView: View {
                 self.lastNameFilter = "S"
             }
         }
-        .navigationTitle("🖇 DynamicFiltering")
+        .navigationTitle("🧑‍🎤 DynamicFiltering")
     }
 }
 

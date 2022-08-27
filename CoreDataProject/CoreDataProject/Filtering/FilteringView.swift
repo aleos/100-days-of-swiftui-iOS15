@@ -64,7 +64,7 @@ struct FilteringView: View {
                 try? self.moc.save()
             }
         }
-        .navigationTitle("🖇 Filtering")
+        .navigationTitle("🛸 Filtering")
     }
 }
 

@@ -31,7 +31,7 @@ struct UniqueView: View {
                 }
             }
         }
-        .navigationTitle("🥇 Unique")
+        .navigationTitle("🧙‍♂️ Unique")
     }
 }
 
