@@ -50,8 +50,8 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
         }
     }
 
-    init(filter: Filter, key: String, value: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: filter.string(key: key, value: value)))
+    init(filter: Filter = .equals, key: String, value: String, sortDescriptors: [SortDescriptor<T>] = [], @ViewBuilder content: @escaping (T) -> Content) {
+        _fetchRequest = FetchRequest<T>(sortDescriptors: sortDescriptors, predicate: NSPredicate(format: filter.string(key: key, value: value)))
         self.content = content
     }
 }
