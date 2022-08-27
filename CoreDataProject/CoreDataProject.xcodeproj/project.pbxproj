@@ -11,6 +11,9 @@
 		5769287428BA4F7800E3A598 /* ForEachIDSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769287328BA4F7800E3A598 /* ForEachIDSelfView.swift */; };
 		5769287E28BA579800E3A598 /* UniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769287D28BA579800E3A598 /* UniqueView.swift */; };
 		5769288128BA59A600E3A598 /* FilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769288028BA59A600E3A598 /* FilteringView.swift */; };
+		5769288428BA61A400E3A598 /* DynamicFilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769288328BA61A400E3A598 /* DynamicFilteringView.swift */; };
+		5769288828BA624300E3A598 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769288628BA624300E3A598 /* Singer+CoreDataClass.swift */; };
+		5769288928BA624300E3A598 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769288728BA624300E3A598 /* Singer+CoreDataProperties.swift */; };
 		57A9719D28B8042C00CDB987 /* CoreDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9719C28B8042C00CDB987 /* CoreDataProjectApp.swift */; };
 		57A9719F28B8042C00CDB987 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9719E28B8042C00CDB987 /* ContentView.swift */; };
 		57A971A128B8042D00CDB987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A971A028B8042D00CDB987 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		5769287328BA4F7800E3A598 /* ForEachIDSelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachIDSelfView.swift; sourceTree = "<group>"; };
 		5769287D28BA579800E3A598 /* UniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueView.swift; sourceTree = "<group>"; };
 		5769288028BA59A600E3A598 /* FilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringView.swift; sourceTree = "<group>"; };
+		5769288328BA61A400E3A598 /* DynamicFilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteringView.swift; sourceTree = "<group>"; };
+		5769288628BA624300E3A598 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5769288728BA624300E3A598 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		57A9719928B8042C00CDB987 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A9719C28B8042C00CDB987 /* CoreDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectApp.swift; sourceTree = "<group>"; };
 		57A9719E28B8042C00CDB987 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +74,17 @@
 			path = Filtering;
 			sourceTree = "<group>";
 		};
+		5769288528BA61B600E3A598 /* DynamicFiltering */ = {
+			isa = PBXGroup;
+			children = (
+				5769288328BA61A400E3A598 /* DynamicFilteringView.swift */,
+				5769287128BA2CD700E3A598 /* FilteredList.swift */,
+				5769288628BA624300E3A598 /* Singer+CoreDataClass.swift */,
+				5769288728BA624300E3A598 /* Singer+CoreDataProperties.swift */,
+			);
+			path = DynamicFiltering;
+			sourceTree = "<group>";
+		};
 		57A9719028B8042C00CDB987 = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +109,8 @@
 				5769287928BA554700E3A598 /* ForEachIDSelf */,
 				5769287F28BA579C00E3A598 /* Unique */,
 				5769288228BA59C400E3A598 /* Filtering */,
+				5769288528BA61B600E3A598 /* DynamicFiltering */,
 				57A971B028B805FE00CDB987 /* DataController.swift */,
-				5769287128BA2CD700E3A598 /* FilteredList.swift */,
 				57A971B228B8063400CDB987 /* CoreDataProject.xcdatamodeld */,
 				57A971A028B8042D00CDB987 /* Assets.xcassets */,
 				57A971A228B8042D00CDB987 /* Preview Content */,
@@ -183,9 +200,12 @@
 				57A971B128B805FE00CDB987 /* DataController.swift in Sources */,
 				5769287428BA4F7800E3A598 /* ForEachIDSelfView.swift in Sources */,
 				57A971B428B8063400CDB987 /* CoreDataProject.xcdatamodeld in Sources */,
+				5769288928BA624300E3A598 /* Singer+CoreDataProperties.swift in Sources */,
 				57A9719D28B8042C00CDB987 /* CoreDataProjectApp.swift in Sources */,
 				5769288128BA59A600E3A598 /* FilteringView.swift in Sources */,
 				5769287228BA2CD700E3A598 /* FilteredList.swift in Sources */,
+				5769288828BA624300E3A598 /* Singer+CoreDataClass.swift in Sources */,
+				5769288428BA61A400E3A598 /* DynamicFilteringView.swift in Sources */,
 				5769287E28BA579800E3A598 /* UniqueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,7 +5,6 @@
 //  Created by Alexander Ostrovsky on 25.08.2022.
 //
 
-import CoreData
 import SwiftUI
 
 struct ContentView: View {
@@ -15,7 +14,7 @@ struct ContentView: View {
                 NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
                 NavigationLink("🥇 Unique by constraints") { UniqueView() }
                 NavigationLink("🖇 Filtering") { FilteringView() }
-                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🖇 DynamicFiltering") { DynamicFilteringView() }
                 NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
                 NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
                 NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }

@@ -5,7 +5,6 @@
 //  Created by Alexander Ostrovsky on 27.08.2022.
 //
 
-import CoreData
 import SwiftUI
 
 struct UniqueView: View {
