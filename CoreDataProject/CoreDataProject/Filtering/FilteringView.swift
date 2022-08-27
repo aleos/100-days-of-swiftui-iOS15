@@ -9,12 +9,39 @@ import SwiftUI
 
 struct FilteringView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Ship.entity(), sortDescriptors: [], predicate: NSPredicate(format: "universe == 'Star Wars'")) var ships: FetchedResults<Ship>
+    
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "universe == 'Star Wars'")) var shipsStarWars: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "universe == %@", "Star Wars")) var shipsStarWarsParam: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "name < %@", "F")) var shipsLessThanF: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "universe IN %@", ["Aliens", "Firefly", "Star Trek"])) var shipsUniverseIn: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "name BEGINSWITH %@", "E")) var shipsBeginsWithE: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "name BEGINSWITH[c] %@", "e")) var shipsBeginsWithECaseInsensitive: FetchedResults<Ship>
+    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "NOT name BEGINSWITH[c] %@", "e")) var shipsNotBeginsWithECaseInsensitive: FetchedResults<Ship>
 
     var body: some View {
         VStack {
-            List(ships, id: \.self) { ship in
-                Text(ship.name ?? "Unknown name")
+            Form {
+                NavigationLink("`universe == 'Star Wars'`") {
+                    List(shipsStarWars, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`universe == %@`") {
+                    List(shipsStarWarsParam, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`name < 'F'`") {
+                    List(shipsLessThanF, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`universe IN %@`") {
+                    List(shipsUniverseIn, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`name BEGINSWITH 'E'`") {
+                    List(shipsBeginsWithE, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`name BEGINSWITH[c] 'e'`") {
+                    List(shipsBeginsWithECaseInsensitive, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
+                NavigationLink("`NOT name BEGINSWITH[c] 'e'`") {
+                    List(shipsNotBeginsWithECaseInsensitive, id: \.self) { ship in Text(ship.name ?? "Unknown name")}
+                }
             }
 
             Button("Add Examples") {
@@ -37,13 +64,14 @@ struct FilteringView: View {
                 try? self.moc.save()
             }
         }
+        .navigationTitle("🖇 Filtering")
     }
 }
 
 struct FilteringView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ForEachIDSelfView()
+            FilteringView()
         }
         .preferredColorScheme(.dark)
     }
