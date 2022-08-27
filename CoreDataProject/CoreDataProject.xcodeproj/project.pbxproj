@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5769287228BA2CD700E3A598 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769287128BA2CD700E3A598 /* FilteredList.swift */; };
+		5769287428BA4F7800E3A598 /* ForEachIDSelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769287328BA4F7800E3A598 /* ForEachIDSelfView.swift */; };
+		5769287E28BA579800E3A598 /* UniqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769287D28BA579800E3A598 /* UniqueView.swift */; };
+		5769288128BA59A600E3A598 /* FilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769288028BA59A600E3A598 /* FilteringView.swift */; };
 		57A9719D28B8042C00CDB987 /* CoreDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9719C28B8042C00CDB987 /* CoreDataProjectApp.swift */; };
 		57A9719F28B8042C00CDB987 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9719E28B8042C00CDB987 /* ContentView.swift */; };
 		57A971A128B8042D00CDB987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A971A028B8042D00CDB987 /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5769287128BA2CD700E3A598 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		5769287328BA4F7800E3A598 /* ForEachIDSelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachIDSelfView.swift; sourceTree = "<group>"; };
+		5769287D28BA579800E3A598 /* UniqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueView.swift; sourceTree = "<group>"; };
+		5769288028BA59A600E3A598 /* FilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringView.swift; sourceTree = "<group>"; };
 		57A9719928B8042C00CDB987 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A9719C28B8042C00CDB987 /* CoreDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectApp.swift; sourceTree = "<group>"; };
 		57A9719E28B8042C00CDB987 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +44,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5769287928BA554700E3A598 /* ForEachIDSelf */ = {
+			isa = PBXGroup;
+			children = (
+				5769287328BA4F7800E3A598 /* ForEachIDSelfView.swift */,
+			);
+			path = ForEachIDSelf;
+			sourceTree = "<group>";
+		};
+		5769287F28BA579C00E3A598 /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				5769287D28BA579800E3A598 /* UniqueView.swift */,
+			);
+			path = Unique;
+			sourceTree = "<group>";
+		};
+		5769288228BA59C400E3A598 /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				5769288028BA59A600E3A598 /* FilteringView.swift */,
+			);
+			path = Filtering;
+			sourceTree = "<group>";
+		};
 		57A9719028B8042C00CDB987 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +89,11 @@
 			children = (
 				57A9719C28B8042C00CDB987 /* CoreDataProjectApp.swift */,
 				57A9719E28B8042C00CDB987 /* ContentView.swift */,
+				5769287928BA554700E3A598 /* ForEachIDSelf */,
+				5769287F28BA579C00E3A598 /* Unique */,
+				5769288228BA59C400E3A598 /* Filtering */,
 				57A971B028B805FE00CDB987 /* DataController.swift */,
+				5769287128BA2CD700E3A598 /* FilteredList.swift */,
 				57A971B228B8063400CDB987 /* CoreDataProject.xcdatamodeld */,
 				57A971A028B8042D00CDB987 /* Assets.xcassets */,
 				57A971A228B8042D00CDB987 /* Preview Content */,
@@ -145,8 +181,12 @@
 			files = (
 				57A9719F28B8042C00CDB987 /* ContentView.swift in Sources */,
 				57A971B128B805FE00CDB987 /* DataController.swift in Sources */,
+				5769287428BA4F7800E3A598 /* ForEachIDSelfView.swift in Sources */,
 				57A971B428B8063400CDB987 /* CoreDataProject.xcdatamodeld in Sources */,
 				57A9719D28B8042C00CDB987 /* CoreDataProjectApp.swift in Sources */,
+				5769288128BA59A600E3A598 /* FilteringView.swift in Sources */,
+				5769287228BA2CD700E3A598 /* FilteredList.swift in Sources */,
+				5769287E28BA579800E3A598 /* UniqueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +321,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,8 +349,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

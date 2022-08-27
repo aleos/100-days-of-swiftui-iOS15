@@ -9,40 +9,29 @@ import CoreData
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "universe IN %@", ["Aliens", "Firefly", "Star Trek"])) var ships: FetchedResults<Ship>
-
     var body: some View {
-        VStack {
-            List(ships, id: \.self) { ship in
-                Text(ship.name ?? "Unknown name")
+        NavigationView {
+            Form {
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🥇 Unique by constraints") { UniqueView() }
+                NavigationLink("🖇 Filtering") { FilteringView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
+                NavigationLink("🆔 ForEach id `\\.self`") { ForEachIDSelfView() }
             }
-            
-            Button("Add Examples") {
-                let ship1 = Ship(context: moc)
-                ship1.name = "Enterprise"
-                ship1.universe = "Star Trek"
-                
-                let ship2 = Ship(context: moc)
-                ship2.name = "Defiant"
-                ship2.universe = "Star Trek"
-                
-                let ship3 = Ship(context: moc)
-                ship3.name = "Millennium Falcon"
-                ship3.universe = "Star Wars"
-                
-                let ship4 = Ship(context: moc)
-                ship4.name = "Executor"
-                ship4.universe = "Star Wars"
-                
-                try? moc.save()
-            }
+            .navigationTitle("🗄️ Core Data")
         }
+        .navigationViewStyle(.stack)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
