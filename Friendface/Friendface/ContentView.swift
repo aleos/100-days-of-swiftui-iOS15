@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var users = Users()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(users.users) { user in
+                Text(user.name)
+            }
+            .navigationTitle("friendface")
+        }
+        .navigationViewStyle(.stack)
+        .onAppear {
+            users.fetchUsers()
+        }
     }
 }
 
