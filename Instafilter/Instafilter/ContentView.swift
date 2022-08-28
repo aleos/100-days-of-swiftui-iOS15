@@ -11,14 +11,20 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var image: Image?
+    @State private var showingImagePicker = false
     
     var body: some View {
         VStack {
             image?
                 .resizable()
                 .scaledToFit()
+            Button("Select Image") {
+                showingImagePicker = true
+            }
         }
-        .onAppear(perform: loadImage)
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker()
+        }
     }
     
     func loadImage() {
@@ -42,7 +48,7 @@ struct ContentView: View {
         
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             let uiImage = UIImage(cgImage: cgimg)
-            image = Image(uiImage: uiImage)
+//            image = Image(uiImage: uiImage)
         }
     }
 }
