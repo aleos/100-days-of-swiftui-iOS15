@@ -55,7 +55,7 @@ struct UserDetailView: View {
 struct UserDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            UserDetailView(user: User(id: UUID().uuidString, isActive: true, name: "John Appleseed", age: 31, email: "email@john.me", address: "1 Infinite Loop, California", about: "About me", registered: .now, tags: ["Swift", "SwiftUI"], friends: [Friend(id: UUID().uuidString, name: "Anna Freeman"),Friend(id: UUID().uuidString, name: "Paul Hudson"), Friend(id: UUID().uuidString, name: "Bill Murray")]))
+            UserDetailView(user: User(id: UUID(), isActive: true, name: "John Appleseed", age: 31, email: "email@john.me", address: "1 Infinite Loop, California", about: "About me", registered: .now, tags: ["Swift", "SwiftUI"], friends: [Friend(id: UUID(), name: "Anna Freeman"),Friend(id: UUID(), name: "Paul Hudson"), Friend(id: UUID(), name: "Bill Murray")]))
         }
     }
 }
