@@ -8,14 +8,14 @@
 import Foundation
 
 struct User: Codable, Identifiable {
-    var id: UUID
-    var isActive: Bool
-    var name: String
-    var age: Int
-    var email: String
-    var address: String
-    var about: String
-    var registered: Date
-    var tags: [String]
-    var friends: [Friend]
+    let id: UUID
+    let isActive: Bool
+    let name: String
+    let age: Int
+    let email: String
+    let address: String
+    let about: String
+    let registered: Date
+    let tags: [String]
+    let friends: [Friend]
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 struct Friend: Codable, Identifiable {
-    var id: UUID
-    var name: String
+    let id: UUID
+    let name: String
 }
