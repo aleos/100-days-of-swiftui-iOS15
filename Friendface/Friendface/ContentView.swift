@@ -22,8 +22,8 @@ struct ContentView: View {
             .navigationTitle("friendface")
         }
         .navigationViewStyle(.stack)
-        .onAppear {
-            users.fetchUsers()
+        .task {
+            await users.fetchUsers()
         }
     }
 }

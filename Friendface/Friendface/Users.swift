@@ -10,23 +10,17 @@ import Foundation
 class Users: ObservableObject {
     @Published private(set) var users: [User] = []
     
-    func fetchUsers() {
+    func fetchUsers() async {
         guard users.isEmpty else { return }
-        var request = URLRequest(url: URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!)
-        request.httpMethod = "GET"
-        URLSession.shared.dataTask(with: request) { data, _, error in
-            if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .iso8601
-                    let users = try decoder.decode([User].self, from: data)
-                    DispatchQueue.main.async {
-                        self.users = users
-                    }
-                } catch {
-                    print(error)
-                }
-            }
-        }.resume()
+        let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            users = try decoder.decode([User].self, from: data)
+        } catch {
+            print(error)
+        }
     }
 }
