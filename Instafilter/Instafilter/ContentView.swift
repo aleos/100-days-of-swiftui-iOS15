@@ -21,6 +21,9 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onChange(of: blurAmount) { newValue in
+            print("New value is \(newValue)")
+        }
     }
 }
 
