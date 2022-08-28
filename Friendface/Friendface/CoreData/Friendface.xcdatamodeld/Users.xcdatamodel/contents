@@ -3,6 +3,11 @@
     <entity name="CachedFriend" representedClassName="CachedFriend" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="CachedUser" representedClassName="CachedUser" syncable="YES" codeGenerationType="class">
         <attribute name="about" optional="YES" attributeType="String"/>
@@ -16,5 +21,10 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="registered" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="tags" optional="YES" attributeType="Binary"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
 </model>
