@@ -34,6 +34,12 @@ extension CachedUser {
         return encoded.components(separatedBy: CharacterSet([","]))
     }
     
+    var wrappedFriendsArray: [CachedFriend] {
+        let set = friends as? Set<CachedFriend> ?? []
+        return set.sorted {
+            $0.name ?? "" < $1.name ?? ""
+        }
+    }
 }
 
 // MARK: Generated accessors for friends
