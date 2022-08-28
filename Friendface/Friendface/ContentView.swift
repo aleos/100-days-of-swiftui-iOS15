@@ -14,7 +14,10 @@ struct ContentView: View {
             List(users.users) { user in
                 NavigationLink(destination: UserDetailView(user: user)) {
                     HStack {
-                        Text(user.isActive ? "🔵" : "🔴")
+                        Circle()
+                            .fill(user.isActive ? .green : .gray)
+                            .frame(width: 8)
+                        
                         Text(user.name)
                     }
                 }
