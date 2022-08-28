@@ -52,4 +52,7 @@
    <FileRef
       location = "group:Friendface/Friendface.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Instafilter/Instafilter.xcodeproj">
+   </FileRef>
 </Workspace>
