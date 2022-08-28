@@ -11,3 +11,10 @@ struct Friend: Codable, Identifiable {
     let id: UUID
     let name: String
 }
+
+extension Friend {
+    init(cachedFriend: CachedFriend) {
+        id = cachedFriend.id ?? UUID()
+        name = cachedFriend.wrappedName
+    }
+}

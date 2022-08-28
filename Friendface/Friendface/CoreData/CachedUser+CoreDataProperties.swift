@@ -29,15 +29,60 @@ extension CachedUser {
     
     @NSManaged public var friends: NSSet?
 
+    var wrappedName: String {
+        name ?? ""
+    }
+
+    var wrappedCompany: String {
+        company ?? ""
+    }
+
+    var wrappedEmail: String {
+        email ?? ""
+    }
+
+    var wrappedAddress: String {
+        address ?? ""
+    }
+
+    var wrappedAbout: String {
+        about ?? ""
+    }
+
+    var wrappedRegistered: Date {
+        registered ?? Date.now
+    }
+
+//    var wrappedTags: String {
+//        tags ?? ""
+//    }
     var wrappedTags: [String] {
         guard let encoded = tags else { return [] }
         return encoded.components(separatedBy: CharacterSet([","]))
     }
-    
-    var wrappedFriendsArray: [CachedFriend] {
+
+    var friendsArray: [CachedFriend] {
         let set = friends as? Set<CachedFriend> ?? []
         return set.sorted {
-            $0.name ?? "" < $1.name ?? ""
+            $0.wrappedName < $1.wrappedName
+        }
+    }
+    
+    convenience init(user: User, context: NSManagedObjectContext) {
+        self.init(context: context)
+        
+        id = user.id
+        isActive = user.isActive
+        name = user.name
+        age = Int16(user.age)
+        company = user.company
+        email = user.email
+        address = user.address
+        about = user.about
+        registered = user.registered
+        tags = user.tags.joined(separator: ",")
+        for friend in user.friends {
+            addToFriends(CachedFriend(friend: friend, context: context))
         }
     }
 }

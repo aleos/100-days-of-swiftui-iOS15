@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		572CA9C628BB4DFD006D0379 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CA9C528BB4DFD006D0379 /* User.swift */; };
 		572CA9CA28BB4F09006D0379 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CA9C928BB4F09006D0379 /* Friend.swift */; };
-		572CA9CC28BB4F88006D0379 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CA9CB28BB4F88006D0379 /* Users.swift */; };
 		572CA9CE28BB5692006D0379 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CA9CD28BB5692006D0379 /* UserDetailView.swift */; };
 		576928AA28BB408200E3A598 /* FriendfaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576928A928BB408200E3A598 /* FriendfaceApp.swift */; };
 		576928AC28BB408200E3A598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576928AB28BB408200E3A598 /* ContentView.swift */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		572CA9C528BB4DFD006D0379 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		572CA9C928BB4F09006D0379 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		572CA9CB28BB4F88006D0379 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		572CA9CD28BB5692006D0379 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		576928A628BB408200E3A598 /* Friendface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576928A928BB408200E3A598 /* FriendfaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendfaceApp.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				576928A928BB408200E3A598 /* FriendfaceApp.swift */,
 				576928AB28BB408200E3A598 /* ContentView.swift */,
 				572CA9CD28BB5692006D0379 /* UserDetailView.swift */,
-				572CA9CB28BB4F88006D0379 /* Users.swift */,
 				57FD02D328BB782700D432E6 /* Models */,
 				57FD02D228BB780800D432E6 /* CoreData */,
 				576928AD28BB408300E3A598 /* Assets.xcassets */,
@@ -190,7 +187,6 @@
 				57FD02DB28BB7C5400D432E6 /* CachedUser+CoreDataProperties.swift in Sources */,
 				576928AA28BB408200E3A598 /* FriendfaceApp.swift in Sources */,
 				572CA9C628BB4DFD006D0379 /* User.swift in Sources */,
-				572CA9CC28BB4F88006D0379 /* Users.swift in Sources */,
 				57FD02D128BB77EE00D432E6 /* DataController.swift in Sources */,
 				57FD02DA28BB7C5400D432E6 /* CachedUser+CoreDataClass.swift in Sources */,
 				572CA9CE28BB5692006D0379 /* UserDetailView.swift in Sources */,

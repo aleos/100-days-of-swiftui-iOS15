@@ -21,6 +21,16 @@ extension CachedFriend {
     
     @NSManaged public var user: CachedUser?
 
+    var wrappedName: String {
+        name ?? ""
+    }
+    
+    convenience init(friend: Friend, context: NSManagedObjectContext) {
+        self.init(context: context)
+        
+        id = friend.id
+        name = friend.name
+    }
 }
 
 extension CachedFriend : Identifiable {
