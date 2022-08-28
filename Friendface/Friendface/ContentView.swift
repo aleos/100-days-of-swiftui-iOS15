@@ -12,7 +12,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(users.users) { user in
-                Text(user.name)
+                HStack {
+                    Text(user.isActive ? "🔵" : "🔴")
+                    Text(user.name)
+                }
             }
             .navigationTitle("friendface")
         }
