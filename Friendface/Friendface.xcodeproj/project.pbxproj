@@ -15,6 +15,8 @@
 		576928AC28BB408200E3A598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576928AB28BB408200E3A598 /* ContentView.swift */; };
 		576928AE28BB408300E3A598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576928AD28BB408300E3A598 /* Assets.xcassets */; };
 		576928B128BB408300E3A598 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576928B028BB408300E3A598 /* Preview Assets.xcassets */; };
+		57FD02CF28BB77A600D432E6 /* Friendface.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57FD02CD28BB77A600D432E6 /* Friendface.xcdatamodeld */; };
+		57FD02D128BB77EE00D432E6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD02D028BB77EE00D432E6 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		576928AB28BB408200E3A598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		576928AD28BB408300E3A598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576928B028BB408300E3A598 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57FD02CE28BB77A600D432E6 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
+		57FD02D028BB77EE00D432E6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +67,8 @@
 				576928AB28BB408200E3A598 /* ContentView.swift */,
 				572CA9CD28BB5692006D0379 /* UserDetailView.swift */,
 				572CA9CB28BB4F88006D0379 /* Users.swift */,
-				572CA9C528BB4DFD006D0379 /* User.swift */,
-				572CA9C928BB4F09006D0379 /* Friend.swift */,
+				57FD02D328BB782700D432E6 /* Models */,
+				57FD02D228BB780800D432E6 /* CoreData */,
 				576928AD28BB408300E3A598 /* Assets.xcassets */,
 				576928AF28BB408300E3A598 /* Preview Content */,
 			);
@@ -77,6 +81,24 @@
 				576928B028BB408300E3A598 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57FD02D228BB780800D432E6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				57FD02CD28BB77A600D432E6 /* Friendface.xcdatamodeld */,
+				57FD02D028BB77EE00D432E6 /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		57FD02D328BB782700D432E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				572CA9C528BB4DFD006D0379 /* User.swift */,
+				572CA9C928BB4F09006D0379 /* Friend.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				576928AC28BB408200E3A598 /* ContentView.swift in Sources */,
+				57FD02CF28BB77A600D432E6 /* Friendface.xcdatamodeld in Sources */,
 				576928AA28BB408200E3A598 /* FriendfaceApp.swift in Sources */,
 				572CA9C628BB4DFD006D0379 /* User.swift in Sources */,
 				572CA9CC28BB4F88006D0379 /* Users.swift in Sources */,
+				57FD02D128BB77EE00D432E6 /* DataController.swift in Sources */,
 				572CA9CE28BB5692006D0379 /* UserDetailView.swift in Sources */,
 				572CA9CA28BB4F09006D0379 /* Friend.swift in Sources */,
 			);
@@ -353,6 +377,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57FD02CD28BB77A600D432E6 /* Friendface.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57FD02CE28BB77A600D432E6 /* Users.xcdatamodel */,
+			);
+			currentVersion = 57FD02CE28BB77A600D432E6 /* Users.xcdatamodel */;
+			path = Friendface.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5769289E28BB408200E3A598 /* Project object */;
 }
