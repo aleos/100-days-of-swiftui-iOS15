@@ -21,11 +21,14 @@
 8. `‌Moonshot`
 9. 🧪 `‌Drawing`
 
-	Consolidation IV. Milestone: Projects 7-9, Challenge: **‌`HabitTracker`**
+	Consolidation IV. Milestone: Projects 7-9. Challenge: **‌`HabitTracker`**
 
 10. `CupcakeCorner`
 11. `‌Bookworm`
 12. 🧪 `CoreDataProject`
+
+	Consolidation V. Milestone: Projects 10-12. Challenge: **`Friendface`**
+	
 13. `‌`
 14. `‌`
 15. `‌`
