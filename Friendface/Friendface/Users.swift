@@ -11,6 +11,7 @@ class Users: ObservableObject {
     @Published private(set) var users: [User] = []
     
     func fetchUsers() {
+        guard users.isEmpty else { return }
         var request = URLRequest(url: URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) { data, _, error in
