@@ -46,15 +46,21 @@ struct ContentView: View {
                 }
                 
                 LazyVGrid(columns: [GridItem(.fixed(80)), GridItem(.adaptive(minimum: 200))], alignment: .leading) {
-                    Text("Radius")
-                    Slider(value: $filterRadius, in: 0...200)
-                        .onChange(of: filterRadius) { _ in applyProcessing() }
-                    Text("Scale")
-                    Slider(value: $filterScale, in: 0...10)
-                        .onChange(of: filterScale) { _ in applyProcessing() }
-                    Text("Intensity")
-                    Slider(value: $filterIntensity)
-                        .onChange(of: filterIntensity) { _ in applyProcessing() }
+                    if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                        Text("Radius")
+                        Slider(value: $filterRadius, in: 0...200)
+                            .onChange(of: filterRadius) { _ in applyProcessing() }
+                    }
+                    if currentFilter.inputKeys.contains(kCIInputScaleKey) {
+                        Text("Scale")
+                        Slider(value: $filterScale, in: 0...10)
+                            .onChange(of: filterScale) { _ in applyProcessing() }
+                    }
+                    if currentFilter.inputKeys.contains(kCIInputIntensityKey) {
+                        Text("Intensity")
+                        Slider(value: $filterIntensity)
+                            .onChange(of: filterIntensity) { _ in applyProcessing() }
+                    }
                 }
                 .padding(.vertical)
                 
