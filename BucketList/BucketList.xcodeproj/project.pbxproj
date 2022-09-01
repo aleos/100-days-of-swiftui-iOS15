@@ -11,6 +11,7 @@
 		57E51C1328C11AF500D0950B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E51C1228C11AF500D0950B /* ContentView.swift */; };
 		57E51C1528C11AF600D0950B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E51C1428C11AF600D0950B /* Assets.xcassets */; };
 		57E51C1828C11AF600D0950B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E51C1728C11AF600D0950B /* Preview Assets.xcassets */; };
+		57E51C1F28C124E300D0950B /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E51C1E28C124E300D0950B /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		57E51C1228C11AF500D0950B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57E51C1428C11AF600D0950B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E51C1728C11AF600D0950B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57E51C1E28C124E300D0950B /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				57E51C1028C11AF500D0950B /* BucketListApp.swift */,
 				57E51C1228C11AF500D0950B /* ContentView.swift */,
+				57E51C1E28C124E300D0950B /* FileManager-DocumentsDirectory.swift */,
 				57E51C1428C11AF600D0950B /* Assets.xcassets */,
 				57E51C1628C11AF600D0950B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E51C1F28C124E300D0950B /* FileManager-DocumentsDirectory.swift in Sources */,
 				57E51C1328C11AF500D0950B /* ContentView.swift in Sources */,
 				57E51C1128C11AF500D0950B /* BucketListApp.swift in Sources */,
 			);
