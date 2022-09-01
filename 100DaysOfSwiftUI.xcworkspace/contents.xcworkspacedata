@@ -55,4 +55,7 @@
    <FileRef
       location = "group:Instafilter/Instafilter.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:BucketList/BucketList.xcodeproj">
+   </FileRef>
 </Workspace>
