@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57BB2E2828C292CB006236D3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB2E2728C292CB006236D3 /* Location.swift */; };
 		57E51C1128C11AF500D0950B /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E51C1028C11AF500D0950B /* BucketListApp.swift */; };
 		57E51C1328C11AF500D0950B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E51C1228C11AF500D0950B /* ContentView.swift */; };
 		57E51C1528C11AF600D0950B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E51C1428C11AF600D0950B /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57BB2E2728C292CB006236D3 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		57E51C0D28C11AF500D0950B /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E51C1028C11AF500D0950B /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		57E51C1228C11AF500D0950B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				57E51C1028C11AF500D0950B /* BucketListApp.swift */,
 				57E51C1228C11AF500D0950B /* ContentView.swift */,
+				57BB2E2728C292CB006236D3 /* Location.swift */,
 				57E51C1E28C124E300D0950B /* FileManager-DocumentsDirectory.swift */,
 				57E51C1428C11AF600D0950B /* Assets.xcassets */,
 				57E51C1628C11AF600D0950B /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				57E51C1F28C124E300D0950B /* FileManager-DocumentsDirectory.swift in Sources */,
 				57E51C1328C11AF500D0950B /* ContentView.swift in Sources */,
+				57BB2E2828C292CB006236D3 /* Location.swift in Sources */,
 				57E51C1128C11AF500D0950B /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +276,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 25GXF4LUJT;
+				DEVELOPMENT_TEAM = 2UZBQ4Q9LW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
@@ -306,7 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 25GXF4LUJT;
+				DEVELOPMENT_TEAM = 2UZBQ4Q9LW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
