@@ -71,6 +71,9 @@ struct ContentView: View {
             .background(.blue)
             .foregroundColor(.white)
             .clipShape(Capsule())
+            .alert("Auth error", isPresented: Binding<Bool>(get: { viewModel.authError != nil }, set: { _ in }), actions: {}) {
+                Text("\(viewModel.authError?.localizedDescription ?? "Unknown")")
+            }
         }
     }
 }

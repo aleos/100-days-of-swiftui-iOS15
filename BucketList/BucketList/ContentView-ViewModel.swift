@@ -16,6 +16,7 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
+        @Published var authError: LAError?
         
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
@@ -60,17 +61,16 @@ extension ContentView {
                 let reason = "Please authenticate yourself to unlock your places."
 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-
-                    if success {
-                        Task { @MainActor in
+                    Task { @MainActor in
+                        if success {
                             self.isUnlocked = true
+                        } else {
+                            self.authError = authenticationError as? LAError
                         }
-                    } else {
-                        // error
                     }
                 }
             } else {
-                // no biometrics
+                authError = LAError(_nsError: error!)
             }
         }
     }
