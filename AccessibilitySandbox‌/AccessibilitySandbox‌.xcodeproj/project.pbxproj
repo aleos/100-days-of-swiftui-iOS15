@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5711682628CE75B0006DFB2C /* IdentifyingViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5711682528CE75B0006DFB2C /* IdentifyingViewsView.swift */; };
 		57D2B2E028CA8A4600E6C59C /* AccessibilitySandbox_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2B2DF28CA8A4600E6C59C /* AccessibilitySandbox_App.swift */; };
 		57D2B2E228CA8A4600E6C59C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2B2E128CA8A4600E6C59C /* ContentView.swift */; };
 		57D2B2E428CA8A4700E6C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D2B2E328CA8A4700E6C59C /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5711682528CE75B0006DFB2C /* IdentifyingViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyingViewsView.swift; sourceTree = "<group>"; };
 		57D2B2DC28CA8A4600E6C59C /* AccessibilitySandbox‌.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccessibilitySandbox‌.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D2B2DF28CA8A4600E6C59C /* AccessibilitySandbox_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilitySandbox_App.swift; sourceTree = "<group>"; };
 		57D2B2E128CA8A4600E6C59C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				57D2B2DF28CA8A4600E6C59C /* AccessibilitySandbox_App.swift */,
 				57D2B2E128CA8A4600E6C59C /* ContentView.swift */,
+				5711682528CE75B0006DFB2C /* IdentifyingViewsView.swift */,
 				57D2B2E328CA8A4700E6C59C /* Assets.xcassets */,
 				57D2B2E528CA8A4700E6C59C /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D2B2E228CA8A4600E6C59C /* ContentView.swift in Sources */,
+				5711682628CE75B0006DFB2C /* IdentifyingViewsView.swift in Sources */,
 				57D2B2E028CA8A4600E6C59C /* AccessibilitySandbox_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
