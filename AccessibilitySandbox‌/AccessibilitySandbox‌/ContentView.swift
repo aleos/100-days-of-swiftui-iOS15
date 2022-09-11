@@ -13,6 +13,7 @@ struct ContentView: View {
             Form {
                 NavigationLink("🎆 Identifying views with useful labels") { IdentifyingViewsView() }
                 NavigationLink("🤲 Grouping children") { GroupingChildrenView() }
+                NavigationLink("📖 Reading Values") { ReadingValuesView() }
             }
             .navigationTitle("♿️ Accessibility")
         }
