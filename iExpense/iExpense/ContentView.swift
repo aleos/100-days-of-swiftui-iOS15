@@ -18,6 +18,9 @@ struct ContentView: View {
                     Section {
                         ForEach(expenses.items.filter { $0.type == type }) { item in
                             ExpenseRow(item: item)
+                                .accessibilityElement()
+                                .accessibilityLabel("\(item.name), amount: \(item.amount)")
+                                .accessibilityValue(String(item.amount))
                         }
                         .onDelete {
                             removeItems(at: $0, type: type)
