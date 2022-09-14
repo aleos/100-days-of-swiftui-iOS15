@@ -73,8 +73,6 @@ struct CheckoutView: View {
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            CheckoutView(order: SharedOrder())
-        }
+        CheckoutView(order: SharedOrder())
     }
 }
