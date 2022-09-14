@@ -91,6 +91,7 @@ struct MissionView: View {
                                     Text(crewMember.astronaut.name)
                                         .foregroundColor(.white)
                                         .font(.headline)
+                                        .accessibilityLabel(crewMember.astronaut.name.replacingOccurrences(of: ".", with: " "))
                                     Text(crewMember.role)
                                         .foregroundColor(.secondary)
                                 }
