@@ -9,13 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                
+            }
+            .navigationTitle("Friends")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
-        .padding()
+    }
+}
+
+struct Friend: Identifiable {
+    let id = UUID()
+    var photo: UIImage
+    var name: String
+}
+
+@MainActor
+class Friends: ObservableObject {
+    
+    @Published private(set) var friends: [Friend] = []
+    
+    init() {
+        
     }
 }
 
