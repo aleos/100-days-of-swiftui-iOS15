@@ -61,4 +61,7 @@
    <FileRef
       location = "group:AccessibilitySandbox&#x200c;/AccessibilitySandbox&#x200c;.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:RememberName/RememberName.xcodeproj">
+   </FileRef>
 </Workspace>
