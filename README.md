@@ -9,7 +9,7 @@
 2. `GuessTheFlag`
 3. 🧪 `ViewsAndModifiers`
 
-	Consolidation II. Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
+    Consolidation II. Milestone: Projects 1-3. Challenge: **`RockPaperScissors`**
 
 4. `BetterRest`
 5. `WordScramble`
@@ -21,17 +21,20 @@
 8. `‌Moonshot`
 9. 🧪 `‌Drawing`
 
-	Consolidation IV. Milestone: Projects 7-9. Challenge: **‌`HabitTracker`**
+    Consolidation IV. Milestone: Projects 7-9. Challenge: **‌`HabitTracker`**
 
 10. `CupcakeCorner`
 11. `‌Bookworm`
 12. 🧪 `CoreDataProject`
 
-	Consolidation V. Milestone: Projects 10-12. Challenge: **`Friendface`**
+    Consolidation V. Milestone: Projects 10-12. Challenge: **`Friendface`**
 
 13. `Instafilter‌`
 14. `‌BucketList`
 15. `🧪AccessibilitySandbox‌`
+
+
+
 16. `‌`
 17. `‌`
 18. `‌`

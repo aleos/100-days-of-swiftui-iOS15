@@ -58,4 +58,7 @@
    <FileRef
       location = "group:BucketList/BucketList.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:AccessibilitySandbox&#x200c;/AccessibilitySandbox&#x200c;.xcodeproj">
+   </FileRef>
 </Workspace>
