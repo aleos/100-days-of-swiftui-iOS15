@@ -31,9 +31,9 @@
 
 13. `Instafilter‌`
 14. `‌BucketList`
-15. `🧪AccessibilitySandbox‌`
+15. 🧪 `AccessibilitySandbox‌`
 
-		Consolidation VI. Milestone: Projects 13-15. Challenge: **`RememberName`**
+    Consolidation VI. Milestone: Projects 13-15. Challenge: **`RememberName`**
 
 16. `‌`
 17. `‌`
