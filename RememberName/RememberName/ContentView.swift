@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var friends = Friends()
+    
     var body: some View {
         NavigationView {
-            List {
-                
+            List(friends.array) { friend in
+                HStack {
+                    Image(uiImage: friend.photo)
+                        .resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                    Text(friend.name)
+                        .font(.headline)
+                }
             }
             .navigationTitle("Friends")
             .toolbar {
@@ -24,22 +34,6 @@ struct ContentView: View {
                 }
             }
         }
-    }
-}
-
-struct Friend: Identifiable {
-    let id = UUID()
-    var photo: UIImage
-    var name: String
-}
-
-@MainActor
-class Friends: ObservableObject {
-    
-    @Published private(set) var friends: [Friend] = []
-    
-    init() {
-        
     }
 }
 
