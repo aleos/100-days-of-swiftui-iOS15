@@ -34,20 +34,7 @@ struct ContentView: View {
                 ImagePicker(image: $friendImage)
             }
             .sheet(isPresented: $showingFriendFillName) {
-                VStack {
-                    Image(uiImage: friendImage ?? UIImage())
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fill)
-                        .frame(maxHeight: 300)
-                        .clipShape(Circle())
-                        .background(.red)
-                    TextField("Name", text: $friendName)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                        .background(.green)
-                    Spacer()
-                }
-                .background(.blue)
+                UserDetailView(friendImage: friendImage ?? UIImage(), friendName: $friendName)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

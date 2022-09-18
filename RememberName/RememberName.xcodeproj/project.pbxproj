@@ -15,6 +15,7 @@
 		579B470D28D39EEF00573B0F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B470C28D39EEF00573B0F /* Friend.swift */; };
 		579B470F28D39F1900573B0F /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B470E28D39F1900573B0F /* Friends.swift */; };
 		579B471128D3A72300573B0F /* FileManager+Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579B471028D3A72300573B0F /* FileManager+Documents.swift */; };
+		57AA3DC128D7A17400948CB5 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA3DC028D7A17400948CB5 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		579B470C28D39EEF00573B0F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		579B470E28D39F1900573B0F /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		579B471028D3A72300573B0F /* FileManager+Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Documents.swift"; sourceTree = "<group>"; };
+		57AA3DC028D7A17400948CB5 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				579B46FC28D39A4600573B0F /* RememberNameApp.swift */,
 				579B46FE28D39A4600573B0F /* ContentView.swift */,
+				57AA3DC028D7A17400948CB5 /* UserDetailView.swift */,
 				579B470C28D39EEF00573B0F /* Friend.swift */,
 				579B470E28D39F1900573B0F /* Friends.swift */,
 				579B470A28D39E6A00573B0F /* ImagePicker.swift */,
@@ -153,6 +156,7 @@
 				579B46FF28D39A4600573B0F /* ContentView.swift in Sources */,
 				579B46FD28D39A4600573B0F /* RememberNameApp.swift in Sources */,
 				579B470F28D39F1900573B0F /* Friends.swift in Sources */,
+				57AA3DC128D7A17400948CB5 /* UserDetailView.swift in Sources */,
 				579B471128D3A72300573B0F /* FileManager+Documents.swift in Sources */,
 				579B470D28D39EEF00573B0F /* Friend.swift in Sources */,
 			);
